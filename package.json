@@ -1,5 +1,5 @@
 {
-  "name": "islamic-utils",
+  "name": "@azkal/islamic-utils",
   "version": "0.1.0",
   "description": "Accurate and consistent Islamic utilities library for prayer times, qibla direction, and inheritance calculation",
   "main": "dist/index.js",
