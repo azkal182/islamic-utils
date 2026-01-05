@@ -14,11 +14,11 @@
 ## Installation
 
 ```bash
-npm install islamic-utils
+npm install @azkal182/islamic-utils
 # or
-pnpm add islamic-utils
+pnpm add @azkal182/islamic-utils
 # or
-yarn add islamic-utils
+yarn add @azkal182/islamic-utils
 ```
 
 ## Quick Start
