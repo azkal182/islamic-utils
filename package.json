@@ -15,7 +15,8 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
@@ -28,6 +29,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "typecheck": "tsc --noEmit",
     "example:prayer-times": "tsx examples/prayer-times.ts",
+    "example:qibla": "tsx examples/qibla.ts",
     "bench": "vitest bench",
     "prepublishOnly": "pnpm run build"
   },
@@ -45,11 +47,15 @@
     "imsak",
     "dhuha"
   ],
-  "author": "",
+  "author": "azkal182",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/azkal182/islamic-utils.git"
+  },
+  "homepage": "https://github.com/azkal182/islamic-utils#readme",
+  "bugs": {
+    "url": "https://github.com/azkal182/islamic-utils/issues"
   },
   "engines": {
     "node": ">=18"

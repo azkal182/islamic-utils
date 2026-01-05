@@ -253,6 +253,26 @@ export {
 export type { CalculationMethodKey } from './prayer-times';
 
 // ═══════════════════════════════════════════════════════════════════════════
+// Qibla Direction Module
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Main calculator
+export { computeQiblaDirection } from './qibla';
+
+// Types
+export type { QiblaInput, QiblaOptions, QiblaResult, QiblaMeta } from './qibla';
+
+export { CompassDirection, bearingToCompassDirection } from './qibla';
+
+// Great circle utilities
+export {
+  calculateInitialBearing,
+  calculateFinalBearing,
+  calculateGreatCircleDistance,
+  calculateMidpoint,
+} from './qibla';
+
+// ═══════════════════════════════════════════════════════════════════════════
 // Version
 // ═══════════════════════════════════════════════════════════════════════════
 

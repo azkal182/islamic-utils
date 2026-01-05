@@ -8,7 +8,7 @@
 ## Features
 
 ✅ **Prayer Times** - Calculate 9 daily prayer times with 13+ calculation methods
-⏳ **Qibla Direction** - Coming soon
+✅ **Qibla Direction** - Calculate bearing and distance to Ka'bah
 ⏳ **Inheritance (Faraidh)** - Coming soon
 
 ## Installation
@@ -37,6 +37,21 @@ const result = computePrayerTimes(
 if (result.success) {
   console.log('Fajr:', result.data.formatted.fajr);    // "04:24"
   console.log('Maghrib:', result.data.formatted.maghrib); // "18:15"
+}
+```
+
+### Qibla Direction
+
+```typescript
+import { computeQiblaDirection } from 'islamic-utils';
+
+const result = computeQiblaDirection({
+  coordinates: { latitude: -6.2088, longitude: 106.8456 } // Jakarta
+});
+
+if (result.success) {
+  console.log(`Qibla: ${result.data.bearing}°`);  // "295.15°"
+  console.log(`Direction: ${result.data.compassDirection}`); // "WNW"
 }
 ```
 
@@ -149,14 +164,41 @@ if (result.success) {
 }
 ```
 
+## Qibla Direction
+
+### Basic Usage
+
+```typescript
+const result = computeQiblaDirection({
+  coordinates: { latitude: -6.2088, longitude: 106.8456 }
+});
+
+// result.data.bearing = 295.15 (degrees from true north)
+// result.data.compassDirection = 'WNW'
+```
+
+### With Distance
+
+```typescript
+const result = computeQiblaDirection(
+  { coordinates: { latitude: -6.2088, longitude: 106.8456 } },
+  { includeDistance: true }
+);
+
+// result.data.meta.distance = 7920.14 (km to Makkah)
+```
+
+### Compass Directions
+
+16-point compass rose: N, NNE, NE, ENE, E, ESE, SE, SSE, S, SSW, SW, WSW, W, WNW, NW, NNW
+
 ## Performance
 
-| Benchmark | ops/sec |
-|-----------|---------|
-| Single calculation | ~97,500 |
-| Week (7 days) | ~13,700 |
-| Month (30 days) | ~3,280 |
-| Year (365 days) | ~264 |
+| Module | Operation | ops/sec |
+|--------|-----------|--------|
+| Prayer Times | Single calculation | ~97,500 |
+| Prayer Times | Year (365 days) | ~264 |
+| Qibla | Single calculation | ~500,000+ |
 
 ## Design Principles
 
@@ -174,6 +216,7 @@ Full API documentation available at [docs/api](./docs/api).
 
 See [examples/](./examples/) for complete usage examples:
 - [prayer-times.ts](./examples/prayer-times.ts) - All Prayer Times features
+- [qibla.ts](./examples/qibla.ts) - Qibla Direction features
 
 ## License
 
