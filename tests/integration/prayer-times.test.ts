@@ -1,0 +1,279 @@
+/**
+ * @fileoverview Integration tests for Prayer Times module
+ *
+ * Tests the module as a whole from the main entry point,
+ * verifying exports, type compatibility, and cross-module consistency.
+ */
+
+import { describe, it, expect } from 'vitest';
+import {
+  // Main calculator
+  computePrayerTimes,
+
+  // Calculation methods
+  CALCULATION_METHODS,
+  MWL,
+  ISNA,
+  EGYPT,
+  MAKKAH,
+  KARACHI,
+  TEHRAN,
+  JAKIM,
+  SINGAPORE,
+  KEMENAG,
+  DIYANET,
+  UOIF,
+  KUWAIT,
+  QATAR,
+  getMethod,
+  listMethodKeys,
+
+  // Types and enums
+  PrayerName,
+  PRAYER_NAMES_ORDERED,
+  AsrMadhhab,
+  HighLatitudeRule,
+  PrayerRoundingRule,
+  DEFAULT_IMSAK_RULE,
+  DEFAULT_DHUHA_RULE,
+  getAsrShadowFactor,
+
+  // Result utilities
+  isSuccess,
+  isError,
+} from '../../src';
+
+describe('Prayer Times Integration', () => {
+  describe('Module Exports', () => {
+    it('should export computePrayerTimes function', () => {
+      expect(computePrayerTimes).toBeDefined();
+      expect(typeof computePrayerTimes).toBe('function');
+    });
+
+    it('should export all 13 calculation methods', () => {
+      expect(Object.keys(CALCULATION_METHODS)).toHaveLength(13);
+
+      // Individual methods
+      expect(MWL).toBeDefined();
+      expect(ISNA).toBeDefined();
+      expect(EGYPT).toBeDefined();
+      expect(MAKKAH).toBeDefined();
+      expect(KARACHI).toBeDefined();
+      expect(TEHRAN).toBeDefined();
+      expect(JAKIM).toBeDefined();
+      expect(SINGAPORE).toBeDefined();
+      expect(KEMENAG).toBeDefined();
+      expect(DIYANET).toBeDefined();
+      expect(UOIF).toBeDefined();
+      expect(KUWAIT).toBeDefined();
+      expect(QATAR).toBeDefined();
+    });
+
+    it('should export method registry functions', () => {
+      expect(getMethod).toBeDefined();
+      expect(listMethodKeys).toBeDefined();
+
+      // Test registry
+      expect(getMethod('KEMENAG')).toBe(KEMENAG);
+      expect(listMethodKeys()).toContain('KEMENAG');
+    });
+
+    it('should export all enums and constants', () => {
+      // PrayerName
+      expect(PrayerName.IMSAK).toBe('imsak');
+      expect(PrayerName.FAJR).toBe('fajr');
+      expect(PrayerName.SUNRISE).toBe('sunrise');
+      expect(PrayerName.DHUHR).toBe('dhuhr');
+      expect(PrayerName.ASR).toBe('asr');
+      expect(PrayerName.MAGHRIB).toBe('maghrib');
+      expect(PrayerName.ISHA).toBe('isha');
+
+      // PRAYER_NAMES_ORDERED
+      expect(PRAYER_NAMES_ORDERED).toHaveLength(9);
+
+      // AsrMadhhab
+      expect(AsrMadhhab.STANDARD).toBe('standard');
+      expect(AsrMadhhab.HANAFI).toBe('hanafi');
+
+      // HighLatitudeRule
+      expect(HighLatitudeRule.NONE).toBe('none');
+      expect(HighLatitudeRule.MIDDLE_OF_NIGHT).toBe('middle_of_night');
+      expect(HighLatitudeRule.ONE_SEVENTH).toBe('one_seventh');
+      expect(HighLatitudeRule.ANGLE_BASED).toBe('angle_based');
+
+      // PrayerRoundingRule
+      expect(PrayerRoundingRule.NONE).toBe('none');
+      expect(PrayerRoundingRule.NEAREST).toBe('nearest');
+      expect(PrayerRoundingRule.CEIL).toBe('ceil');
+      expect(PrayerRoundingRule.FLOOR).toBe('floor');
+
+      // Default rules
+      expect(DEFAULT_IMSAK_RULE.type).toBe('minutes_before_fajr');
+      expect(DEFAULT_DHUHA_RULE.start.type).toBe('minutes_after_sunrise');
+    });
+
+    it('should export utility functions', () => {
+      expect(getAsrShadowFactor(AsrMadhhab.STANDARD)).toBe(1);
+      expect(getAsrShadowFactor(AsrMadhhab.HANAFI)).toBe(2);
+    });
+  });
+
+  describe('Result Type Compatibility', () => {
+    it('should return success result with data', () => {
+      const result = computePrayerTimes(
+        { latitude: -6.2088, longitude: 106.8456 },
+        { date: { year: 2024, month: 1, day: 15 }, timezone: 7 },
+        { method: KEMENAG }
+      );
+
+      expect(isSuccess(result)).toBe(true);
+      expect(isError(result)).toBe(false);
+
+      if (result.success) {
+        expect(result.data).toBeDefined();
+        expect(result.data.times).toBeDefined();
+        expect(result.data.formatted).toBeDefined();
+        expect(result.data.meta).toBeDefined();
+      }
+    });
+
+    it('should return error result for invalid input', () => {
+      const result = computePrayerTimes(
+        { latitude: 200, longitude: 0 }, // Invalid
+        { date: { year: 2024, month: 1, day: 15 }, timezone: 7 },
+        { method: KEMENAG }
+      );
+
+      expect(isSuccess(result)).toBe(false);
+      expect(isError(result)).toBe(true);
+
+      if (!result.success) {
+        expect(result.error).toBeDefined();
+        expect(result.error.code).toBe('INVALID_COORDINATES');
+      }
+    });
+  });
+
+  describe('Full Calculation Flow', () => {
+    it('should calculate prayer times for multiple locations', () => {
+      const locations = [
+        { name: 'Jakarta', coords: { latitude: -6.2088, longitude: 106.8456 }, tz: 7 },
+        { name: 'Makkah', coords: { latitude: 21.4225, longitude: 39.8262 }, tz: 3 },
+        { name: 'Cairo', coords: { latitude: 30.0444, longitude: 31.2357 }, tz: 2 },
+        { name: 'Kuala Lumpur', coords: { latitude: 3.139, longitude: 101.6869 }, tz: 8 },
+      ];
+
+      for (const loc of locations) {
+        const result = computePrayerTimes(
+          loc.coords,
+          { date: { year: 2024, month: 1, day: 15 }, timezone: loc.tz },
+          { method: KEMENAG }
+        );
+
+        expect(result.success).toBe(true);
+        if (result.success) {
+          // All times should be valid numbers
+          for (const prayer of PRAYER_NAMES_ORDERED) {
+            expect(result.data.times[prayer]).not.toBeNull();
+            expect(typeof result.data.times[prayer]).toBe('number');
+          }
+        }
+      }
+    });
+
+    it('should calculate prayer times for full year', () => {
+      const location = { latitude: -6.2088, longitude: 106.8456 };
+
+      for (let month = 1; month <= 12; month++) {
+        const result = computePrayerTimes(
+          location,
+          { date: { year: 2024, month, day: 15 }, timezone: 7 },
+          { method: KEMENAG }
+        );
+
+        expect(result.success).toBe(true);
+        if (result.success) {
+          // Fajr should always be before 6 AM in tropical regions
+          expect(result.data.times.fajr!).toBeLessThan(6);
+          // Maghrib should be around 17:30-18:30 in tropical regions
+          expect(result.data.times.maghrib!).toBeGreaterThan(17);
+          expect(result.data.times.maghrib!).toBeLessThan(19);
+        }
+      }
+    });
+
+    it('should produce consistent results with same input', () => {
+      const input = {
+        location: { latitude: -6.2088, longitude: 106.8456 },
+        context: { date: { year: 2024, month: 1, day: 15 }, timezone: 7 },
+        params: { method: KEMENAG },
+      } as const;
+
+      const result1 = computePrayerTimes(input.location, input.context, input.params);
+      const result2 = computePrayerTimes(input.location, input.context, input.params);
+      const result3 = computePrayerTimes(input.location, input.context, input.params);
+
+      expect(result1.success).toBe(true);
+      expect(result2.success).toBe(true);
+      expect(result3.success).toBe(true);
+
+      if (result1.success && result2.success && result3.success) {
+        // All results should be identical
+        expect(result1.data.times).toEqual(result2.data.times);
+        expect(result2.data.times).toEqual(result3.data.times);
+      }
+    });
+  });
+
+  describe('All Calculation Methods', () => {
+    const methodKeys = listMethodKeys();
+
+    for (const key of methodKeys) {
+      it(`should calculate with ${key} method`, () => {
+        const method = getMethod(key);
+        expect(method).toBeDefined();
+
+        const result = computePrayerTimes(
+          { latitude: 21.4225, longitude: 39.8262 }, // Makkah
+          { date: { year: 2024, month: 1, day: 15 }, timezone: 3 },
+          { method: method! }
+        );
+
+        expect(result.success).toBe(true);
+        if (result.success) {
+          expect(result.data.meta.method.name).toBe(method!.name);
+        }
+      });
+    }
+  });
+
+  describe('Error Handling Consistency', () => {
+    it('should return consistent error format', () => {
+      const testCases = [
+        {
+          location: { latitude: 100, longitude: 0 },
+          expectedCode: 'INVALID_COORDINATES',
+        },
+        {
+          location: { latitude: 0, longitude: 200 },
+          expectedCode: 'INVALID_COORDINATES',
+        },
+      ];
+
+      for (const tc of testCases) {
+        const result = computePrayerTimes(
+          tc.location,
+          { date: { year: 2024, month: 1, day: 15 }, timezone: 7 },
+          { method: KEMENAG }
+        );
+
+        expect(result.success).toBe(false);
+        if (!result.success) {
+          expect(result.error.code).toBe(tc.expectedCode);
+          expect(result.error.message).toBeDefined();
+          expect(result.error.timestamp).toBeDefined();
+        }
+      }
+    });
+  });
+});
