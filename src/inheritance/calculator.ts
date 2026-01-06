@@ -219,8 +219,29 @@ export function computeInheritance(
   // ─────────────────────────────────────────────────────────────────────────
   // Step 9: Convert to absolute values and build HeirShare[]
   // ─────────────────────────────────────────────────────────────────────────
+  // Build category map based on calculation path
+  const categoryMap = new Map<HeirType, ShareCategory>();
+  for (const heir of activeHeirs) {
+    // Default to asabah for sons/daughters when they have shares
+    if (
+      heir.type === HeirType.SON ||
+      heir.type === HeirType.DAUGHTER ||
+      heir.type === HeirType.GRANDSON_SON ||
+      heir.type === HeirType.GRANDDAUGHTER_SON
+    ) {
+      categoryMap.set(heir.type, ShareCategory.ASABAH);
+    } else {
+      categoryMap.set(heir.type, ShareCategory.FURUDH);
+    }
+  }
 
-  const shares = buildHeirShares(input.heirs, finalShares, hijabResult.blockedHeirs, netEstate);
+  const shares = buildHeirShares(
+    input.heirs,
+    finalShares,
+    hijabResult.blockedHeirs,
+    netEstate,
+    categoryMap
+  );
 
   allTrace.push({
     step: allTrace.length + 1,
@@ -429,7 +450,8 @@ function buildHeirShares(
   originalHeirs: HeirInput[],
   shares: Map<HeirType, Fraction>,
   blockedHeirs: { heir: HeirInput; blockedBy: HeirType[] }[],
-  netEstate: number
+  netEstate: number,
+  categoryMap: Map<HeirType, ShareCategory>
 ): HeirShare[] {
   const result: HeirShare[] = [];
 
@@ -457,7 +479,7 @@ function buildHeirShares(
       result.push({
         heirType: heir.type,
         count: heir.count,
-        category: share.numerator > 0 ? ShareCategory.FURUDH : ShareCategory.ASABAH,
+        category: categoryMap.get(heir.type) ?? ShareCategory.FURUDH,
         finalShare: share,
         totalValue,
         perPersonValue,

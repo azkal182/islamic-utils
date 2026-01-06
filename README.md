@@ -4,14 +4,17 @@
 
 [![npm version](https://img.shields.io/npm/v/@azkal182/islamic-utils.svg)](https://www.npmjs.com/package/@azkal182/islamic-utils)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 
-## Features
+## ✨ Features
 
-✅ **Prayer Times** - Calculate 9 daily prayer times with 13+ calculation methods
-✅ **Qibla Direction** - Calculate bearing and distance to Ka'bah
-✅ **Inheritance (Faraidh)** - Complete Islamic inheritance calculator with 30+ heir types
+| Module | Status | Description |
+|--------|--------|-------------|
+| 🕌 **Prayer Times** | ✅ Complete | 9 prayer times with 13+ calculation methods |
+| 🧭 **Qibla Direction** | ✅ Complete | Bearing and distance to Ka'bah |
+| 📜 **Inheritance (Faraidh)** | ✅ Complete | 30+ heir types, hijab, aul, radd, special cases |
 
-## Installation
+## 📦 Installation
 
 ```bash
 npm install @azkal182/islamic-utils
@@ -21,7 +24,7 @@ pnpm add @azkal182/islamic-utils
 yarn add @azkal182/islamic-utils
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
 ### Prayer Times
 
@@ -35,7 +38,7 @@ const result = computePrayerTimes(
 );
 
 if (result.success) {
-  console.log('Fajr:', result.data.formatted.fajr);    // "04:24"
+  console.log('Fajr:', result.data.formatted.fajr);       // "04:24"
   console.log('Maghrib:', result.data.formatted.maghrib); // "18:15"
 }
 ```
@@ -46,11 +49,11 @@ if (result.success) {
 import { computeQiblaDirection } from '@azkal182/islamic-utils';
 
 const result = computeQiblaDirection({
-  coordinates: { latitude: -6.2088, longitude: 106.8456 } // Jakarta
+  coordinates: { latitude: -6.2088, longitude: 106.8456 }
 });
 
 if (result.success) {
-  console.log(`Qibla: ${result.data.bearing}°`);  // "295.15°"
+  console.log(`Qibla: ${result.data.bearing}°`);          // "295.15°"
   console.log(`Direction: ${result.data.compassDirection}`); // "WNW"
 }
 ```
@@ -62,7 +65,7 @@ import { computeInheritance, HeirType } from '@azkal182/islamic-utils';
 
 const result = computeInheritance({
   estate: {
-    grossValue: 1_000_000_000, // 1 Billion IDR
+    grossValue: 1_000_000_000,
     debts: 50_000_000,
     wasiyyah: 100_000_000,
   },
@@ -84,30 +87,189 @@ if (result.success) {
 
 ---
 
-## Inheritance (Faraidh) Module
+## 🕌 Prayer Times Module
 
 ### Overview
 
-Complete Islamic inheritance calculator implementing:
+Calculate 9 daily prayer times with support for:
+- **13+ calculation methods** from major Islamic organizations
+- **High latitude handling** for regions above 48.5°
+- **Asr madhhab options** (Standard/Hanafi)
+- **Time adjustments** and rounding options
+- **Trace mode** for debugging
+
+### 9 Prayer Times
+
+| Time | Arabic | Description |
+|------|--------|-------------|
+| `imsak` | الإمساك | Time to stop eating before Fajr |
+| `fajr` | الفجر | Dawn prayer |
+| `sunrise` | الشروق | Sunrise (Isyraq) |
+| `dhuha_start` | بداية الضحى | Start of Dhuha window |
+| `dhuha_end` | نهاية الضحى | End of Dhuha window |
+| `dhuhr` | الظهر | Noon prayer |
+| `asr` | العصر | Afternoon prayer |
+| `maghrib` | المغرب | Sunset prayer |
+| `isha` | العشاء | Night prayer |
+
+### 13 Calculation Methods
+
+| Method | Fajr | Isha | Region |
+|--------|------|------|--------|
+| `MWL` | 18° | 17° | Muslim World League |
+| `ISNA` | 15° | 15° | North America |
+| `EGYPT` | 19.5° | 17.5° | Egypt, Africa |
+| `MAKKAH` | 18.5° | 90 min | Saudi Arabia |
+| `KARACHI` | 18° | 18° | Pakistan, India |
+| `TEHRAN` | 17.7° | 14° | Iran |
+| `JAKIM` | 20° | 18° | Malaysia |
+| `SINGAPORE` | 20° | 18° | Singapore |
+| `KEMENAG` | 20° | 18° | Indonesia |
+| `DIYANET` | 18° | 17° | Turkey |
+| `UOIF` | 12° | 12° | France |
+| `KUWAIT` | 18° | 17.5° | Kuwait |
+| `QATAR` | 18° | 90 min | Qatar |
+
+### Advanced Options
+
+```typescript
+import {
+  computePrayerTimes,
+  CALCULATION_METHODS,
+  AsrMadhhab,
+  HighLatitudeRule,
+  PrayerRoundingRule
+} from '@azkal182/islamic-utils';
+
+const result = computePrayerTimes(
+  { latitude: 59.3293, longitude: 18.0686 }, // Stockholm
+  { date: { year: 2024, month: 6, day: 21 }, timezone: 2 },
+  {
+    method: CALCULATION_METHODS.MWL,
+    asrMadhhab: AsrMadhhab.HANAFI,           // Hanafi Asr calculation
+    highLatitudeRule: HighLatitudeRule.MIDDLE_OF_NIGHT,
+  },
+  {
+    includeTrace: true,                       // Debug trace
+  }
+);
+```
+
+### Asr Calculation Methods
+
+| Method | Shadow Factor | Used By |
+|--------|---------------|---------|
+| `AsrMadhhab.STANDARD` | 1× object length | Shafi'i, Maliki, Hanbali |
+| `AsrMadhhab.HANAFI` | 2× object length | Hanafi |
+
+### High Latitude Rules
+
+For locations above ~48.5° where sun may not reach required angles:
+
+| Rule | Description |
+|------|-------------|
+| `NONE` | Return null if time cannot be calculated |
+| `MIDDLE_OF_NIGHT` | Split night from Maghrib to Fajr |
+| `ONE_SEVENTH` | Night portion = 1/7 of total night |
+| `ANGLE_BASED` | Proportional to angle vs night duration |
+
+---
+
+## 🧭 Qibla Direction Module
+
+### Overview
+
+Calculate the direction (bearing) from any location on Earth to the Ka'bah in Makkah using great circle navigation.
+
+### Basic Usage
+
+```typescript
+import { computeQiblaDirection } from '@azkal182/islamic-utils';
+
+const result = computeQiblaDirection({
+  coordinates: { latitude: -6.2088, longitude: 106.8456 } // Jakarta
+});
+
+if (result.success) {
+  console.log(`Bearing: ${result.data.bearing}°`);           // 295.15
+  console.log(`Compass: ${result.data.compassDirection}`);   // "WNW"
+}
+```
+
+### With Distance Calculation
+
+```typescript
+const result = computeQiblaDirection(
+  { coordinates: { latitude: -6.2088, longitude: 106.8456 } },
+  { includeDistance: true, includeTrace: true }
+);
+
+if (result.success) {
+  console.log(`Distance: ${result.data.meta.distance} km`); // 7920.14
+  console.log(`At Ka'bah: ${result.data.meta.atKaaba}`);    // false
+}
+```
+
+### 16-Point Compass Directions
+
+The module returns compass directions: `N`, `NNE`, `NE`, `ENE`, `E`, `ESE`, `SE`, `SSE`, `S`, `SSW`, `SW`, `WSW`, `W`, `WNW`, `NW`, `NNW`
+
+### Great Circle Utilities
+
+```typescript
+import {
+  calculateInitialBearing,
+  calculateFinalBearing,
+  calculateGreatCircleDistance,
+  calculateMidpoint
+} from '@azkal182/islamic-utils';
+
+// Calculate bearing between two points
+const bearing = calculateInitialBearing(
+  { latitude: -6.2, longitude: 106.8 },
+  { latitude: 21.4, longitude: 39.8 }
+);
+```
+
+---
+
+## 📜 Inheritance (Faraidh) Module
+
+### Overview
+
+Complete Islamic inheritance calculator implementing classical fiqh rules:
 
 - **30+ Heir Types** - All Quranic and Sunnah-defined heirs
 - **7 Hijab Rules** - Heir blocking/exclusion rules
 - **10 Special Cases** - Including Umariyatayn, Mushtarakah, Akdariyyah
 - **Aul & Radd** - Over-subscription and remainder handling
 - **Wasiyyah Limits** - Automatic 1/3 cap enforcement
+- **Fraction Utilities** - Precise calculations without floating-point errors
 
-### Heir Types
+### Heir Types (30+)
 
-#### Primary Heirs
+#### Primary Heirs (Ashab al-Furudh & Asabah)
 
-| Category | Types |
-|----------|-------|
-| **Spouse** | `HUSBAND`, `WIFE` |
-| **Parents** | `FATHER`, `MOTHER`, `GRANDFATHER_PATERNAL`, `GRANDMOTHER_MATERNAL`, `GRANDMOTHER_PATERNAL` |
-| **Children** | `SON`, `DAUGHTER`, `GRANDSON_SON`, `GRANDDAUGHTER_SON` |
-| **Siblings** | `BROTHER_FULL`, `SISTER_FULL`, `BROTHER_PATERNAL`, `SISTER_PATERNAL`, `BROTHER_UTERINE`, `SISTER_UTERINE` |
+| Category | Types | Arabic |
+|----------|-------|--------|
+| **Spouse** | `HUSBAND`, `WIFE` | الزوج، الزوجة |
+| **Parents** | `FATHER`, `MOTHER` | الأب، الأم |
+| **Grandparents** | `GRANDFATHER_PATERNAL`, `GRANDMOTHER_MATERNAL`, `GRANDMOTHER_PATERNAL` | الجد، الجدة |
+| **Children** | `SON`, `DAUGHTER` | الابن، البنت |
+| **Grandchildren** | `GRANDSON_SON`, `GRANDDAUGHTER_SON` | ابن الابن، بنت الابن |
 
-#### Extended Heirs
+#### Siblings
+
+| Type | Arabic | Description |
+|------|--------|-------------|
+| `BROTHER_FULL` | الأخ الشقيق | Same father and mother |
+| `SISTER_FULL` | الأخت الشقيقة | Same father and mother |
+| `BROTHER_PATERNAL` | الأخ لأب | Same father only |
+| `SISTER_PATERNAL` | الأخت لأب | Same father only |
+| `BROTHER_UTERINE` | الأخ لأم | Same mother only |
+| `SISTER_UTERINE` | الأخت لأم | Same mother only |
+
+#### Extended Asabah
 
 | Category | Types |
 |----------|-------|
@@ -115,50 +277,65 @@ Complete Islamic inheritance calculator implementing:
 | **Uncles** | `UNCLE_FULL`, `UNCLE_PATERNAL` |
 | **Cousins** | `COUSIN_FULL`, `COUSIN_PATERNAL` |
 
-### Furudh (Fixed Shares)
+### Fixed Shares (Furudh)
 
 | Share | Arabic | Recipients |
 |-------|--------|------------|
-| 1/2 | النصف | Husband (no child), Daughter (single), Full/Paternal Sister (single) |
-| 1/4 | الربع | Husband (with child), Wife (no child) |
-| 1/8 | الثمن | Wife (with child) |
-| 1/3 | الثلث | Mother (no child, <2 siblings), Uterine Siblings (2+) |
-| 1/6 | السدس | Father/Mother (with child), Grandmother, Granddaughter (with daughter) |
-| 2/3 | الثلثان | Daughters (2+), Full/Paternal Sisters (2+) |
+| **1/2** (النصف) | Husband (no child), Single daughter, Single full/paternal sister |
+| **1/4** (الربع) | Husband (with child), Wife (no child) |
+| **1/8** (الثمن) | Wife (with child) |
+| **1/3** (الثلث) | Mother (no child, <2 siblings), 2+ uterine siblings |
+| **1/6** (السدس) | Father (with child), Mother (with child), Grandmother, Granddaughters with daughter |
+| **2/3** (الثلثان) | 2+ daughters, 2+ full/paternal sisters |
+
+### Asabah (Residuary Heirs)
+
+| Type | Arabic | Description |
+|------|--------|-------------|
+| **Asabah bi Nafs** | عصبة بالنفس | Male heirs who take remainder alone |
+| **Asabah bil Ghayr** | عصبة بالغير | Females with male siblings (2:1 ratio) |
+| **Asabah maal Ghayr** | عصبة مع الغير | Sisters with daughters |
 
 ### Hijab (Blocking) Rules
 
-| Blocker | Blocked Heirs |
-|---------|---------------|
-| Son/Daughter | Full/Paternal Brothers & Sisters |
-| Father | Grandfather, All Siblings, Uncles, Nephews |
-| Mother | All Grandmothers |
-| Son | Grandsons, Granddaughters |
-| Full Brother | Paternal Brothers & Sisters |
-| Two Full Sisters | Paternal Sisters |
+7 total exclusion rules implemented:
 
-### Special Cases
+| Rule | Blocker | Blocked Heirs |
+|------|---------|---------------|
+| E1 | Son/Daughter | All siblings |
+| E2 | Father | Grandfather, all siblings, uncles, nephews, cousins |
+| E3 | Son | Grandsons, Granddaughters |
+| E4 | Mother | Maternal grandmother |
+| E5 | Father | Paternal grandmother |
+| E6 | Full brother | Paternal siblings |
+| E7 | Paternal brother | Nephews |
+
+### Special Cases (10)
 
 | Case | Arabic | Condition |
 |------|--------|-----------|
-| Umariyatayn | العُمَرِيَّتَان | Spouse + Mother + Father, no descendant |
-| Mushtarakah | المُشْتَرَكَة | Husband + Mother + Uterine Siblings (2+) + Full Siblings |
-| Akdariyyah | الأكدرية | Husband + Mother + Grandfather + 1 Full Sister |
-| Sisters Maal Ghayr | - | Daughter + Sisters, no son |
-| Completion 2/3 | - | 1 Daughter + Granddaughters |
+| **Umariyatayn** | العُمَرِيَّتَان | Spouse + Mother + Father, no descendant |
+| **Mushtarakah** | المُشْتَرَكَة | Husband + Mother + 2+ uterine siblings + full siblings |
+| **Akdariyyah** | الأكدرية | Husband + Mother + Grandfather + 1 full sister |
+| **Maal Ghayr** | عصبة مع الغير | Daughter(s) + sisters (no son) |
+| **Completion 2/3** | تكملة الثلثين | 1 daughter + granddaughters |
 
 ### Estate Deductions
+
+Deductions are applied in Islamic order:
 
 ```typescript
 const result = computeInheritance({
   estate: {
-    grossValue: 1_000_000_000,
-    funeralCosts: 50_000_000,    // Deducted first
-    debts: 100_000_000,          // Deducted second
-    wasiyyah: 200_000_000,       // Max 1/3 of remainder (after debts)
+    grossValue: 1_000_000_000,     // Total harta
+    funeralCosts: 50_000_000,      // 1. Biaya jenazah (first)
+    debts: 100_000_000,            // 2. Hutang (second)
+    wasiyyah: 200_000_000,         // 3. Wasiat (max 1/3 of remainder)
     wasiyyahApprovedByHeirs: false, // If true, wasiyyah can exceed 1/3
+    currency: 'IDR',
   },
-  // ...
+  heirs: [...],
+  deceased: { gender: 'male' },
 });
 ```
 
@@ -169,7 +346,7 @@ For debugging and verification:
 ```typescript
 const result = computeInheritance(
   { estate: {...}, heirs: [...], deceased: {...} },
-  { enableTrace: true }
+  { includeTrace: true }
 );
 
 if (result.success) {
@@ -187,7 +364,6 @@ import {
   computeInheritance,
   HeirType,
   getHeirArabicName,
-  getHeirCategory
 } from '@azkal182/islamic-utils';
 
 const result = computeInheritance({
@@ -200,8 +376,8 @@ const result = computeInheritance({
     { type: HeirType.WIFE, count: 1 },
     { type: HeirType.FATHER, count: 1 },
     { type: HeirType.MOTHER, count: 1 },
-    { type: HeirType.SON, count: 2 },
-    { type: HeirType.DAUGHTER, count: 1 },
+    { type: HeirType.SON, count: 1 },
+    { type: HeirType.DAUGHTER, count: 2 },
   ],
   deceased: { gender: 'male' },
 });
@@ -209,135 +385,144 @@ const result = computeInheritance({
 if (result.success) {
   const data = result.data;
 
-  console.log('Estate Summary:');
-  console.log(`  Gross: ${data.grossEstate}`);
-  console.log(`  Net:   ${data.netEstate}`);
+  console.log('=== Estate Summary ===');
+  console.log(`Gross Value: ${data.meta.estate.grossValue}`);
+  console.log(`Net Estate:  ${data.netEstate}`);
 
-  console.log('\nHeir Shares:');
+  console.log('\n=== Heir Shares ===');
   for (const share of data.shares) {
     if (share.isBlocked) {
-      console.log(`  ${share.heirType}: BLOCKED`);
+      console.log(`${share.heirType}: BLOCKED by ${share.blockedBy}`);
     } else {
-      console.log(`  ${share.heirType} (${getHeirArabicName(share.heirType)})`);
-      console.log(`    Share: ${share.shareDescription}`);
-      console.log(`    Value: ${share.totalValue}`);
+      const arabic = getHeirArabicName(share.heirType);
+      console.log(`${share.heirType} (${arabic})`);
+      console.log(`  Category: ${share.category}`);
+      console.log(`  Total: ${share.totalValue}`);
+      console.log(`  Per Person: ${share.perPersonValue}`);
     }
   }
 
-  console.log('\nSummary:');
-  console.log(`  Aul Applied: ${data.summary.aulApplied}`);
-  console.log(`  Radd Applied: ${data.summary.raddApplied}`);
-  console.log(`  Special Case: ${data.summary.specialCase || 'None'}`);
-  console.log(`  Valid: ${data.verification.isValid}`);
+  console.log('\n=== Summary ===');
+  console.log(`Aul Applied: ${data.summary.aulApplied}`);
+  console.log(`Radd Applied: ${data.summary.raddApplied}`);
+  console.log(`Special Case: ${data.summary.specialCase || 'None'}`);
+  console.log(`Valid: ${data.verification.isValid}`);
 }
 ```
 
 ---
 
-## Prayer Times Module
+## 🎯 Result Pattern
 
-### 9 Prayer Times
-
-| Time | Description |
-|------|-------------|
-| `imsak` | Time to stop eating before Fajr |
-| `fajr` | Dawn prayer |
-| `sunrise` | Sunrise (Isyraq) |
-| `dhuha_start` | Start of Dhuha prayer window |
-| `dhuha_end` | End of Dhuha prayer window |
-| `dhuhr` | Noon prayer |
-| `asr` | Afternoon prayer |
-| `maghrib` | Sunset prayer |
-| `isha` | Night prayer |
-
-### 13 Calculation Methods
-
-| Method | Fajr Angle | Isha | Region |
-|--------|------------|------|--------|
-| `MWL` | 18° | 17° | Muslim World League |
-| `ISNA` | 15° | 15° | North America |
-| `EGYPT` | 19.5° | 17.5° | Egypt, Africa |
-| `MAKKAH` | 18.5° | 90 min | Saudi Arabia |
-| `KARACHI` | 18° | 18° | Pakistan, India |
-| `TEHRAN` | 17.7° | 14° | Iran |
-| `JAKIM` | 20° | 18° | Malaysia |
-| `SINGAPORE` | 20° | 18° | Singapore |
-| `KEMENAG` | 20° | 18° | Indonesia |
-| `DIYANET` | 18° | 17° | Turkey |
-| `UOIF` | 12° | 12° | France |
-| `KUWAIT` | 18° | 17.5° | Kuwait |
-| `QATAR` | 18° | 90 min | Qatar |
-
-### Asr Calculation
+All library functions return a `Result<T>` type (similar to Rust):
 
 ```typescript
-import { AsrMadhhab } from '@azkal182/islamic-utils';
+type Result<T> = SuccessResult<T> | ErrorResult;
 
-// Standard (Shafi'i, Maliki, Hanbali): shadow = 1× object length
-{ asrMadhhab: AsrMadhhab.STANDARD }
+interface SuccessResult<T> {
+  success: true;
+  data: T;
+  trace?: TraceStep[];
+}
 
-// Hanafi: shadow = 2× object length
-{ asrMadhhab: AsrMadhhab.HANAFI }
+interface ErrorResult {
+  success: false;
+  error: LibraryError;
+  trace?: TraceStep[];
+}
 ```
 
-### High Latitude Handling
-
-For locations above ~48.5° latitude:
+### Usage
 
 ```typescript
-import { HighLatitudeRule } from '@azkal182/islamic-utils';
+const result = computePrayerTimes(...);
 
-{ highLatitudeRule: HighLatitudeRule.MIDDLE_OF_NIGHT } // Default
-{ highLatitudeRule: HighLatitudeRule.ONE_SEVENTH }
-{ highLatitudeRule: HighLatitudeRule.ANGLE_BASED }
+if (result.success) {
+  // TypeScript knows result.data exists
+  console.log(result.data.times.fajr);
+} else {
+  // TypeScript knows result.error exists
+  console.error(result.error.message);
+}
+
+// Or use utility functions
+import { unwrap, unwrapOr, isSuccess, isError } from '@azkal182/islamic-utils';
+
+const data = unwrap(result);              // Throws on error
+const data = unwrapOr(result, fallback);  // Returns fallback on error
 ```
 
 ---
 
-## Qibla Direction Module
+## 📊 Performance
 
-### Basic Usage
+| Module | Operation | Speed |
+|--------|-----------|-------|
+| Prayer Times | Single calculation | ~97,500 ops/sec |
+| Prayer Times | Year (365 days) | ~264 ops/sec |
+| Qibla | Single calculation | ~500,000+ ops/sec |
+| Inheritance | Simple case | ~50,000+ ops/sec |
+| Inheritance | Complex case | ~25,000+ ops/sec |
+
+---
+
+## 🎨 Design Principles
+
+- **Language-Agnostic** - Pure algorithms without platform dependencies
+- **Deterministic** - Same input always produces same output
+- **Explainable** - Results include optional trace for verification
+- **Modular** - Each module can be used independently
+- **No I/O** - All external data provided by the caller
+- **Type-Safe** - Full TypeScript support with strict types
+
+---
+
+## 🗺️ Roadmap
+
+### ✅ Completed (v0.2.0)
+
+- Prayer Times with 13 methods
+- Qibla Direction with great circle navigation
+- Inheritance (Faraidh) with 30+ heir types
+- Hijab, Furudh, Asabah, Aul, Radd rules
+- Special cases (Umariyatayn, Mushtarakah)
+- TypeDoc API documentation
+- Performance benchmarks
+
+### 🔜 Planned Features
+
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| **Gono Gini** | Marital property (harta bersama) calculation before inheritance | High |
+| **Dhawil Arham** | Complete distant relative distribution | Medium |
+| **Grandfather Competition** | Full grandfather with siblings calculation | Medium |
+| **Hijri Calendar** | Hijri date conversion and calculation | Medium |
+| **Zakat Calculator** | Zakat calculation for various assets | Low |
+| **Fasting Calendar** | Ramadan and voluntary fasting calculator | Low |
+
+### 🔜 Gono Gini (Planned)
+
+Support for Indonesian marital property law:
 
 ```typescript
-const result = computeQiblaDirection({
-  coordinates: { latitude: -6.2088, longitude: 106.8456 }
+// Future API (planned)
+const result = computeInheritance({
+  estate: {
+    jointProperty: 600_000_000,    // Harta bersama (gono gini)
+    separateProperty: 400_000_000, // Harta bawaan mayit
+    // ...
+  },
+  // ...
 });
 
-// result.data.bearing = 295.15 (degrees from true north)
-// result.data.compassDirection = 'WNW'
-```
-
-### With Distance
-
-```typescript
-const result = computeQiblaDirection(
-  { coordinates: { latitude: -6.2088, longitude: 106.8456 } },
-  { includeDistance: true }
-);
-
-// result.data.meta.distance = 7920.14 (km to Makkah)
+// Joint property split 50:50 before inheritance
+// Survivor gets: 300M (their half)
+// Inheritance: 300M + 400M = 700M
 ```
 
 ---
 
-## Design Principles
-
-- **Language-Agnostic**: Pure algorithms without platform dependencies
-- **Deterministic**: Same input always produces same output
-- **Explainable**: Results include optional trace for verification
-- **Modular**: Each module can be used independently
-- **No I/O**: All external data provided by the caller
-
-## Performance
-
-| Module | Operation | ops/sec |
-|--------|-----------|--------|
-| Prayer Times | Single calculation | ~97,500 |
-| Prayer Times | Year (365 days) | ~264 |
-| Qibla | Single calculation | ~500,000+ |
-| Inheritance | Single calculation | ~50,000+ |
-
-## Examples
+## 📁 Examples
 
 See [examples/](./examples/) for complete usage examples:
 
@@ -345,6 +530,49 @@ See [examples/](./examples/) for complete usage examples:
 - [qibla.ts](./examples/qibla.ts) - Qibla Direction features
 - [inheritance.ts](./examples/inheritance.ts) - Inheritance (Faraidh) features
 
-## License
+Run examples:
+```bash
+pnpm run example:prayer-times
+pnpm run example:qibla
+pnpm run example:inheritance
+```
 
-MIT
+---
+
+## 📖 API Documentation
+
+Full API documentation generated with TypeDoc:
+
+```bash
+pnpm run docs
+```
+
+Documentation is generated at `docs/api/`.
+
+---
+
+## 🧪 Testing
+
+```bash
+pnpm test           # Run tests in watch mode
+pnpm test:run       # Run tests once
+pnpm test:coverage  # Run with coverage
+pnpm bench          # Run benchmarks
+```
+
+---
+
+## 📄 License
+
+MIT © 2024
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read the [Contributing Guide](./CONTRIBUTING.md) for details.
+
+## 🙏 Acknowledgments
+
+- Islamic calculation methods from major organizations worldwide
+- Classical fiqh sources for inheritance rules
