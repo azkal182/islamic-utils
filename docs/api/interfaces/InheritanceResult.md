@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: InheritanceResult
 
-Defined in: [src/inheritance/types.ts:510](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L510)
+Defined in: [src/inheritance/types.ts:510](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L510)
 
 Complete inheritance calculation result.
 
@@ -16,7 +16,7 @@ Complete inheritance calculation result.
 
 > `readonly` **meta**: [`InheritanceMeta`](InheritanceMeta.md)
 
-Defined in: [src/inheritance/types.ts:529](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L529)
+Defined in: [src/inheritance/types.ts:529](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L529)
 
 Calculation metadata.
 
@@ -26,7 +26,7 @@ Calculation metadata.
 
 > `readonly` **netEstate**: `number`
 
-Defined in: [src/inheritance/types.ts:514](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L514)
+Defined in: [src/inheritance/types.ts:514](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L514)
 
 Net estate value (after deductions).
 
@@ -36,7 +36,7 @@ Net estate value (after deductions).
 
 > `readonly` **shares**: [`HeirShare`](HeirShare.md)[]
 
-Defined in: [src/inheritance/types.ts:519](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L519)
+Defined in: [src/inheritance/types.ts:519](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L519)
 
 Individual share allocations.
 
@@ -46,7 +46,7 @@ Individual share allocations.
 
 > `readonly` **summary**: [`InheritanceSummary`](InheritanceSummary.md)
 
-Defined in: [src/inheritance/types.ts:524](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L524)
+Defined in: [src/inheritance/types.ts:524](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L524)
 
 Calculation summary.
 
@@ -56,7 +56,7 @@ Calculation summary.
 
 > `readonly` **trace**: [`InheritanceTraceStep`](InheritanceTraceStep.md)[]
 
-Defined in: [src/inheritance/types.ts:537](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L537)
+Defined in: [src/inheritance/types.ts:537](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L537)
 
 Detailed trace of calculation steps.
 
@@ -70,7 +70,7 @@ ALWAYS included for inheritance calculations.
 
 > `readonly` **verification**: `object`
 
-Defined in: [src/inheritance/types.ts:542](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L542)
+Defined in: [src/inheritance/types.ts:542](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L542)
 
 Verification that calculation is valid.
 

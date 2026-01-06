@@ -1,8 +1,8 @@
-**Islamic Utilities API v0.2.1**
+**Islamic Utilities API v0.2.2**
 
 ***
 
-# Islamic Utilities API v0.2.1
+# Islamic Utilities API v0.2.2
 
 ## Fileoverview
 

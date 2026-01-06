@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: PrayerCalculationParams
 
-Defined in: [src/prayer-times/types.ts:400](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L400)
+Defined in: [src/prayer-times/types.ts:400](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L400)
 
 Parameters for prayer time calculation.
 
@@ -21,7 +21,7 @@ Only `method` is required; all others have sensible defaults.
 
 > `readonly` `optional` **adjustments**: `Partial`\<`Record`\<[`PrayerName`](../type-aliases/PrayerName.md), `number`\>\>
 
-Defined in: [src/prayer-times/types.ts:459](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L459)
+Defined in: [src/prayer-times/types.ts:459](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L459)
 
 Manual adjustments in minutes for each prayer.
 
@@ -35,7 +35,7 @@ Applied after all calculations but before rounding.
 
 > `readonly` `optional` **asrMadhhab**: [`AsrMadhhab`](../type-aliases/AsrMadhhab.md)
 
-Defined in: [src/prayer-times/types.ts:416](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L416)
+Defined in: [src/prayer-times/types.ts:416](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L416)
 
 Madhhab for Asr calculation.
 
@@ -49,7 +49,7 @@ Defaults to STANDARD (Shafi'i shadow factor of 1).
 
 > `readonly` `optional` **dhuhaRule**: [`DhuhaRule`](DhuhaRule.md)
 
-Defined in: [src/prayer-times/types.ts:443](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L443)
+Defined in: [src/prayer-times/types.ts:443](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L443)
 
 Rule for calculating Dhuha time window.
 
@@ -63,7 +63,7 @@ Defaults to 15 minutes after sunrise, ending at Dhuhr.
 
 > `readonly` `optional` **highLatitudeRule**: [`HighLatitudeRule`](../type-aliases/HighLatitudeRule.md)
 
-Defined in: [src/prayer-times/types.ts:427](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L427)
+Defined in: [src/prayer-times/types.ts:427](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L427)
 
 Rule for high latitude locations.
 
@@ -80,7 +80,7 @@ Defaults to MIDDLE_OF_NIGHT.
 
 > `readonly` `optional` **imsakRule**: [`ImsakRule`](ImsakRule.md)
 
-Defined in: [src/prayer-times/types.ts:435](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L435)
+Defined in: [src/prayer-times/types.ts:435](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L435)
 
 Rule for calculating Imsak.
 
@@ -94,7 +94,7 @@ Defaults to 10 minutes before Fajr.
 
 > `readonly` **method**: [`CalculationMethod`](CalculationMethod.md)
 
-Defined in: [src/prayer-times/types.ts:408](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L408)
+Defined in: [src/prayer-times/types.ts:408](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L408)
 
 The calculation method to use.
 
@@ -109,7 +109,7 @@ or define a custom method.
 
 > `readonly` `optional` **roundingRule**: [`PrayerRoundingRule`](../type-aliases/PrayerRoundingRule.md)
 
-Defined in: [src/prayer-times/types.ts:451](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L451)
+Defined in: [src/prayer-times/types.ts:451](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L451)
 
 Rounding rule for final times.
 
@@ -123,7 +123,7 @@ Defaults to NEAREST (round to nearest minute).
 
 > `readonly` `optional` **safetyBuffer**: [`SafetyBuffer`](../type-aliases/SafetyBuffer.md)
 
-Defined in: [src/prayer-times/types.ts:468](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L468)
+Defined in: [src/prayer-times/types.ts:468](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L468)
 
 Safety buffer (ihtiyath) in minutes.
 

@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > `const` **Errors**: `object`
 
-Defined in: [src/core/errors/error.ts:170](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/errors/error.ts#L170)
+Defined in: [src/core/errors/error.ts:170](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/error.ts#L170)
 
 Pre-built error factory functions for common error types.
 

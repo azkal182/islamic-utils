@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **formatMinutesUntil**(`minutes`): `string`
 
-Defined in: src/prayer-times/next-prayer.ts:238
+Defined in: [src/prayer-times/next-prayer.ts:303](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L303)
 
 Formats minutes into a human-readable countdown string.
 

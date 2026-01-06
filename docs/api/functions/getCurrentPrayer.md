@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,25 +6,19 @@
 
 # Function: getCurrentPrayer()
 
-> **getCurrentPrayer**(`currentTime`, `prayerTimes`, `timezone`): [`CurrentPrayerInfo`](../interfaces/CurrentPrayerInfo.md)
+> **getCurrentPrayer**(`location`, `timezone`, `params`, `currentTime`): [`Result`](../type-aliases/Result.md)\<[`CurrentPrayerInfo`](../interfaces/CurrentPrayerInfo.md)\>
 
-Defined in: src/prayer-times/next-prayer.ts:195
+Defined in: [src/prayer-times/next-prayer.ts:247](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L247)
 
 Determines the current prayer period.
 
 ## Parameters
 
-### currentTime
+### location
 
-`Date`
+[`LocationInput`](../interfaces/LocationInput.md)
 
-JavaScript Date object representing current time
-
-### prayerTimes
-
-[`PrayerTimesResult`](../interfaces/PrayerTimesResult.md)
-
-Result from computePrayerTimes
+Geographic location (latitude, longitude)
 
 ### timezone
 
@@ -32,17 +26,34 @@ Result from computePrayerTimes
 
 IANA timezone name or UTC offset
 
+### params
+
+[`PrayerCalculationParams`](../interfaces/PrayerCalculationParams.md)
+
+Calculation parameters (method, madhhab, etc.)
+
+### currentTime
+
+`Date` = `...`
+
+Optional, defaults to new Date()
+
 ## Returns
 
-[`CurrentPrayerInfo`](../interfaces/CurrentPrayerInfo.md)
+[`Result`](../type-aliases/Result.md)\<[`CurrentPrayerInfo`](../interfaces/CurrentPrayerInfo.md)\>
 
-Current prayer period info
+Result containing current prayer info or error
 
 ## Example
 
 ```typescript
-const current = getCurrentPrayer(new Date(), result.data, 7);
-if (current.current) {
-  console.log(`Current period: ${current.current}`);
+const result = getCurrentPrayer(
+  { latitude: -6.2088, longitude: 106.8456 },
+  'Asia/Jakarta',
+  { method: KEMENAG }
+);
+
+if (result.success && result.data.current) {
+  console.log(`Current period: ${result.data.current}`);
 }
 ```

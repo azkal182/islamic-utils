@@ -231,35 +231,42 @@ Determine the next upcoming prayer based on current time:
 
 ```typescript
 import {
-  computePrayerTimes,
   getNextPrayer,
   getCurrentPrayer,
   formatMinutesUntil,
   CALCULATION_METHODS
 } from '@azkal182/islamic-utils';
 
-// First, get today's prayer times
-const result = computePrayerTimes(
+// Simple API - calculates everything automatically!
+const result = getNextPrayer(
   { latitude: -6.2088, longitude: 106.8456 },
-  { date: { year: 2024, month: 1, day: 15 }, timezone: 'Asia/Jakarta' },
+  'Asia/Jakarta',
   { method: CALCULATION_METHODS.KEMENAG }
+  // currentTime defaults to new Date()
 );
 
 if (result.success) {
-  // Find next prayer based on current time
-  const next = getNextPrayer(new Date(), result.data, 'Asia/Jakarta');
+  console.log(`Next: ${result.data.name}`);                    // "maghrib"
+  console.log(`Time: ${result.data.time}`);                    // "18:07"
+  console.log(`In: ${formatMinutesUntil(result.data.minutesUntil)}`);  // "1h 30m"
 
-  console.log(`Next: ${next.name}`);                    // "maghrib"
-  console.log(`Time: ${next.time}`);                    // "18:07"
-  console.log(`In: ${formatMinutesUntil(next.minutesUntil)}`);  // "1h 30m"
-
-  if (next.isNextDay) {
+  if (result.data.isNextDay) {
     console.log('(Tomorrow)');
   }
 
-  // Get current prayer period
-  const current = getCurrentPrayer(new Date(), result.data, 'Asia/Jakarta');
-  console.log(`Current period: ${current.current}`);    // "asr"
+  // Prayer times are included in the result
+  console.log(result.data.prayerTimes.formatted);
+}
+
+// Get current prayer period
+const current = getCurrentPrayer(
+  { latitude: -6.2088, longitude: 106.8456 },
+  'Asia/Jakarta',
+  { method: CALCULATION_METHODS.KEMENAG }
+);
+
+if (current.success && current.data.current) {
+  console.log(`Current period: ${current.data.current}`);    // "asr"
 }
 ```
 
@@ -267,16 +274,18 @@ if (result.success) {
 
 ```typescript
 interface NextPrayerInfo {
-  name: PrayerName;      // "maghrib"
-  time: string;          // "18:07"
-  timeNumeric: number;   // 18.12 (fractional hours)
-  minutesUntil: number;  // 90
-  isNextDay: boolean;    // true if past Isha
+  name: PrayerName;           // "maghrib"
+  time: string;               // "18:07"
+  timeNumeric: number;        // 18.12 (fractional hours)
+  minutesUntil: number;       // 90
+  isNextDay: boolean;         // true if past Isha
+  prayerTimes: PrayerTimesResult;  // Full prayer times for today
 }
 
 interface CurrentPrayerInfo {
   current: PrayerName | null;  // Current prayer period
   previous: PrayerName | null; // Previous prayer
+  prayerTimes: PrayerTimesResult;
 }
 ```
 

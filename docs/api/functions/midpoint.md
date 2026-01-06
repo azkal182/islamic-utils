@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **midpoint**(`from`, `to`): [`Coordinates`](../interfaces/Coordinates.md)
 
-Defined in: [src/astronomy/angles.ts:108](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/astronomy/angles.ts#L108)
+Defined in: [src/astronomy/angles.ts:108](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/astronomy/angles.ts#L108)
 
 Calculates the midpoint between two coordinates on a great circle.
 

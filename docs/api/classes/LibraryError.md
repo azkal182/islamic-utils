@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: LibraryError
 
-Defined in: [src/core/errors/error.ts:48](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/errors/error.ts#L48)
+Defined in: [src/core/errors/error.ts:48](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/error.ts#L48)
 
 Base error class for all library errors.
 
@@ -39,7 +39,7 @@ try {
 
 > **new LibraryError**(`code`, `message`, `details?`): `LibraryError`
 
-Defined in: [src/core/errors/error.ts:80](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/errors/error.ts#L80)
+Defined in: [src/core/errors/error.ts:80](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/error.ts#L80)
 
 Creates a new LibraryError.
 
@@ -89,7 +89,7 @@ Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/li
 
 > `readonly` **code**: [`ErrorCode`](../type-aliases/ErrorCode.md)
 
-Defined in: [src/core/errors/error.ts:54](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/errors/error.ts#L54)
+Defined in: [src/core/errors/error.ts:54](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/error.ts#L54)
 
 Error code identifying the type of error.
 
@@ -103,7 +103,7 @@ ErrorCodes for all possible values
 
 > `readonly` `optional` **details**: `Record`\<`string`, `unknown`\>
 
-Defined in: [src/core/errors/error.ts:66](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/errors/error.ts#L66)
+Defined in: [src/core/errors/error.ts:66](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/error.ts#L66)
 
 Additional details about the error.
 
@@ -157,7 +157,7 @@ Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/li
 
 > `readonly` **timestamp**: `Date`
 
-Defined in: [src/core/errors/error.ts:71](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/errors/error.ts#L71)
+Defined in: [src/core/errors/error.ts:71](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/error.ts#L71)
 
 Timestamp when the error was created.
 
@@ -189,7 +189,7 @@ not capture any frames.
 
 > **toJSON**(): `Record`\<`string`, `unknown`\>
 
-Defined in: [src/core/errors/error.ts:114](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/errors/error.ts#L114)
+Defined in: [src/core/errors/error.ts:114](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/error.ts#L114)
 
 Converts the error to a plain object for JSON serialization.
 
@@ -218,7 +218,7 @@ console.log(JSON.stringify(error.toJSON(), null, 2));
 
 > **toString**(): `string`
 
-Defined in: [src/core/errors/error.ts:129](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/errors/error.ts#L129)
+Defined in: [src/core/errors/error.ts:129](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/error.ts#L129)
 
 Creates a string representation of the error.
 

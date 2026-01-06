@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MonthlyPrayerTimesMeta
 
-Defined in: [src/prayer-times/monthly.ts:86](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L86)
+Defined in: [src/prayer-times/monthly.ts:86](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L86)
 
 Metadata for monthly prayer times calculation.
 
@@ -16,7 +16,7 @@ Metadata for monthly prayer times calculation.
 
 > `readonly` **daysInMonth**: `number`
 
-Defined in: [src/prayer-times/monthly.ts:100](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L100)
+Defined in: [src/prayer-times/monthly.ts:100](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L100)
 
 Number of days in the month.
 
@@ -26,7 +26,7 @@ Number of days in the month.
 
 > `readonly` **isLeapYear**: `boolean`
 
-Defined in: [src/prayer-times/monthly.ts:105](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L105)
+Defined in: [src/prayer-times/monthly.ts:105](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L105)
 
 Whether this is a leap year (relevant for February).
 
@@ -36,7 +36,7 @@ Whether this is a leap year (relevant for February).
 
 > `readonly` **location**: [`LocationInput`](LocationInput.md)
 
-Defined in: [src/prayer-times/monthly.ts:110](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L110)
+Defined in: [src/prayer-times/monthly.ts:110](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L110)
 
 Location used for calculation.
 
@@ -46,7 +46,7 @@ Location used for calculation.
 
 > `readonly` **method**: [`CalculationMethod`](CalculationMethod.md)
 
-Defined in: [src/prayer-times/monthly.ts:120](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L120)
+Defined in: [src/prayer-times/monthly.ts:120](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L120)
 
 Calculation method used.
 
@@ -56,7 +56,7 @@ Calculation method used.
 
 > `readonly` **month**: `number`
 
-Defined in: [src/prayer-times/monthly.ts:95](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L95)
+Defined in: [src/prayer-times/monthly.ts:95](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L95)
 
 Month calculated (1-12).
 
@@ -66,7 +66,7 @@ Month calculated (1-12).
 
 > `readonly` **params**: [`PrayerCalculationParams`](PrayerCalculationParams.md)
 
-Defined in: [src/prayer-times/monthly.ts:125](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L125)
+Defined in: [src/prayer-times/monthly.ts:125](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L125)
 
 Full parameters used for calculation.
 
@@ -76,7 +76,7 @@ Full parameters used for calculation.
 
 > `readonly` **timezone**: [`Timezone`](../type-aliases/Timezone.md)
 
-Defined in: [src/prayer-times/monthly.ts:115](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L115)
+Defined in: [src/prayer-times/monthly.ts:115](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L115)
 
 Timezone used.
 
@@ -86,6 +86,6 @@ Timezone used.
 
 > `readonly` **year**: `number`
 
-Defined in: [src/prayer-times/monthly.ts:90](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L90)
+Defined in: [src/prayer-times/monthly.ts:90](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L90)
 
 Year calculated.

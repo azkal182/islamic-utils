@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,25 +6,19 @@
 
 # Function: getNextPrayer()
 
-> **getNextPrayer**(`currentTime`, `prayerTimes`, `timezone`): [`NextPrayerInfo`](../interfaces/NextPrayerInfo.md)
+> **getNextPrayer**(`location`, `timezone`, `params`, `currentTime`): [`Result`](../type-aliases/Result.md)\<[`NextPrayerInfo`](../interfaces/NextPrayerInfo.md)\>
 
-Defined in: src/prayer-times/next-prayer.ts:121
+Defined in: [src/prayer-times/next-prayer.ts:143](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L143)
 
 Determines the next prayer based on current time.
 
 ## Parameters
 
-### currentTime
+### location
 
-`Date`
+[`LocationInput`](../interfaces/LocationInput.md)
 
-JavaScript Date object representing current time
-
-### prayerTimes
-
-[`PrayerTimesResult`](../interfaces/PrayerTimesResult.md)
-
-Result from computePrayerTimes
+Geographic location (latitude, longitude)
 
 ### timezone
 
@@ -32,26 +26,37 @@ Result from computePrayerTimes
 
 IANA timezone name or UTC offset
 
+### params
+
+[`PrayerCalculationParams`](../interfaces/PrayerCalculationParams.md)
+
+Calculation parameters (method, madhhab, etc.)
+
+### currentTime
+
+`Date` = `...`
+
+Optional, defaults to new Date()
+
 ## Returns
 
-[`NextPrayerInfo`](../interfaces/NextPrayerInfo.md)
+[`Result`](../type-aliases/Result.md)\<[`NextPrayerInfo`](../interfaces/NextPrayerInfo.md)\>
 
-Next prayer information
+Result containing next prayer info or error
 
 ## Example
 
 ```typescript
-import { computePrayerTimes, getNextPrayer, CALCULATION_METHODS } from '@azkal182/islamic-utils';
+import { getNextPrayer, KEMENAG } from '@azkal182/islamic-utils';
 
-const result = computePrayerTimes(
+const result = getNextPrayer(
   { latitude: -6.2088, longitude: 106.8456 },
-  { date: { year: 2024, month: 1, day: 15 }, timezone: 7 },
-  { method: CALCULATION_METHODS.KEMENAG }
+  'Asia/Jakarta',
+  { method: KEMENAG }
 );
 
 if (result.success) {
-  const next = getNextPrayer(new Date(), result.data, 7);
-  console.log(`Next: ${next.name} at ${next.time}`);
-  console.log(`In ${next.minutesUntil} minutes`);
+  console.log(`Next: ${result.data.name} at ${result.data.time}`);
+  console.log(`In ${result.data.minutesUntil} minutes`);
 }
 ```

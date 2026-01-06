@@ -234,30 +234,31 @@ console.log('\n' + '='.repeat(60));
 console.log('Example 8: Next Prayer Time');
 console.log('='.repeat(60));
 
-// First, get today's prayer times
-const todayResult = computePrayerTimes(
+// Simple API - no need to call computePrayerTimes first!
+const nextResult = getNextPrayer(
   { latitude: -6.2088, longitude: 106.8456 },
-  { date: { year: 2026, month: 1, day: 6 }, timezone: 'Asia/Jakarta' },
+  'Asia/Jakarta',
   { method: CALCULATION_METHODS.KEMENAG }
+  // currentTime defaults to new Date()
 );
 
-if (todayResult.success) {
-  // Get next prayer based on current time
-  const now = new Date();
-  const next = getNextPrayer(now, todayResult.data, 'Asia/Jakarta');
-  const current = getCurrentPrayer(now, todayResult.data, 'Asia/Jakarta');
+const currentResult = getCurrentPrayer({ latitude: -6.2088, longitude: 106.8456 }, 'Asia/Jakarta', {
+  method: CALCULATION_METHODS.KEMENAG,
+});
 
+if (nextResult.success && currentResult.success) {
+  const now = new Date();
   console.log(`\nCurrent time: ${now.toLocaleTimeString('id-ID', { timeZone: 'Asia/Jakarta' })}`);
 
-  if (current.current) {
-    console.log(`Current period: ${current.current.toUpperCase()}`);
+  if (currentResult.data.current) {
+    console.log(`Current period: ${currentResult.data.current.toUpperCase()}`);
   }
 
-  console.log(`\nNext prayer: ${next.name.toUpperCase()}`);
-  console.log(`  Time: ${next.time}`);
-  console.log(`  In: ${formatMinutesUntil(next.minutesUntil)}`);
+  console.log(`\nNext prayer: ${nextResult.data.name.toUpperCase()}`);
+  console.log(`  Time: ${nextResult.data.time}`);
+  console.log(`  In: ${formatMinutesUntil(nextResult.data.minutesUntil)}`);
 
-  if (next.isNextDay) {
+  if (nextResult.data.isNextDay) {
     console.log('  (Tomorrow)');
   }
 }

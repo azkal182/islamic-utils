@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **dateToLocalTime**(`date`, `timezone`): [`LocalTime`](../interfaces/LocalTime.md)
 
-Defined in: src/core/utils/timezone.ts:74
+Defined in: [src/core/utils/timezone.ts:74](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/utils/timezone.ts#L74)
 
 Converts a JavaScript Date to local time in the specified timezone.
 

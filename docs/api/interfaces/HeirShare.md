@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: HeirShare
 
-Defined in: [src/inheritance/types.ts:329](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L329)
+Defined in: [src/inheritance/types.ts:329](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L329)
 
 Share calculation for a single heir type.
 
@@ -16,7 +16,7 @@ Share calculation for a single heir type.
 
 > `readonly` `optional` **asabahType**: [`AsabahType`](../type-aliases/AsabahType.md)
 
-Defined in: [src/inheritance/types.ts:348](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L348)
+Defined in: [src/inheritance/types.ts:348](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L348)
 
 Asabah type if applicable.
 
@@ -26,7 +26,7 @@ Asabah type if applicable.
 
 > `readonly` `optional` **blockedBy**: [`HeirType`](../type-aliases/HeirType.md)[]
 
-Defined in: [src/inheritance/types.ts:378](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L378)
+Defined in: [src/inheritance/types.ts:378](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L378)
 
 Which heir types blocked this heir.
 
@@ -36,7 +36,7 @@ Which heir types blocked this heir.
 
 > `readonly` **category**: [`ShareCategory`](../type-aliases/ShareCategory.md)
 
-Defined in: [src/inheritance/types.ts:343](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L343)
+Defined in: [src/inheritance/types.ts:343](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L343)
 
 Share category.
 
@@ -46,7 +46,7 @@ Share category.
 
 > `readonly` **count**: `number`
 
-Defined in: [src/inheritance/types.ts:338](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L338)
+Defined in: [src/inheritance/types.ts:338](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L338)
 
 Number of heirs of this type.
 
@@ -56,7 +56,7 @@ Number of heirs of this type.
 
 > `readonly` **finalShare**: [`Fraction`](Fraction.md)
 
-Defined in: [src/inheritance/types.ts:358](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L358)
+Defined in: [src/inheritance/types.ts:358](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L358)
 
 Final share after aul/radd adjustments.
 
@@ -66,7 +66,7 @@ Final share after aul/radd adjustments.
 
 > `readonly` **heirType**: [`HeirType`](../type-aliases/HeirType.md)
 
-Defined in: [src/inheritance/types.ts:333](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L333)
+Defined in: [src/inheritance/types.ts:333](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L333)
 
 Heir type.
 
@@ -76,7 +76,7 @@ Heir type.
 
 > `readonly` **isBlocked**: `boolean`
 
-Defined in: [src/inheritance/types.ts:373](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L373)
+Defined in: [src/inheritance/types.ts:373](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L373)
 
 Is this heir blocked by hijab?
 
@@ -86,7 +86,7 @@ Is this heir blocked by hijab?
 
 > `readonly` `optional` **notes**: `string`[]
 
-Defined in: [src/inheritance/types.ts:383](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L383)
+Defined in: [src/inheritance/types.ts:383](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L383)
 
 Additional notes/explanations.
 
@@ -96,7 +96,7 @@ Additional notes/explanations.
 
 > `readonly` `optional` **originalShare**: [`Fraction`](Fraction.md)
 
-Defined in: [src/inheritance/types.ts:353](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L353)
+Defined in: [src/inheritance/types.ts:353](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L353)
 
 Original furudh share before adjustments.
 
@@ -106,7 +106,7 @@ Original furudh share before adjustments.
 
 > `readonly` **perPersonValue**: `number`
 
-Defined in: [src/inheritance/types.ts:368](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L368)
+Defined in: [src/inheritance/types.ts:368](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L368)
 
 Value per person (totalValue / count).
 
@@ -116,6 +116,6 @@ Value per person (totalValue / count).
 
 > `readonly` **totalValue**: `number`
 
-Defined in: [src/inheritance/types.ts:363](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L363)
+Defined in: [src/inheritance/types.ts:363](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L363)
 
 Total absolute value for this heir type.

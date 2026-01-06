@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: PrayerTimeContext
 
-Defined in: [src/prayer-times/types.ts:592](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L592)
+Defined in: [src/prayer-times/types.ts:592](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L592)
 
 Time context for prayer time calculation.
 
@@ -16,7 +16,7 @@ Time context for prayer time calculation.
 
 > `readonly` **date**: [`DateOnly`](DateOnly.md)
 
-Defined in: [src/prayer-times/types.ts:596](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L596)
+Defined in: [src/prayer-times/types.ts:596](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L596)
 
 The date for which to calculate prayer times.
 
@@ -26,6 +26,6 @@ The date for which to calculate prayer times.
 
 > `readonly` **timezone**: [`Timezone`](../type-aliases/Timezone.md)
 
-Defined in: [src/prayer-times/types.ts:601](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L601)
+Defined in: [src/prayer-times/types.ts:601](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L601)
 
 The timezone (IANA name or UTC offset in hours).

@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CurrentPrayerInfo
 
-Defined in: src/prayer-times/next-prayer.ts:58
+Defined in: [src/prayer-times/next-prayer.ts:75](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L75)
 
 Information about the current prayer period.
 
@@ -16,7 +16,7 @@ Information about the current prayer period.
 
 > `readonly` **current**: [`PrayerName`](../type-aliases/PrayerName.md) \| `null`
 
-Defined in: src/prayer-times/next-prayer.ts:66
+Defined in: [src/prayer-times/next-prayer.ts:83](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L83)
 
 Current prayer period.
 
@@ -27,10 +27,20 @@ null if before Fajr (or if times are invalid).
 
 ***
 
+### prayerTimes
+
+> `readonly` **prayerTimes**: [`PrayerTimesResult`](PrayerTimesResult.md)
+
+Defined in: [src/prayer-times/next-prayer.ts:93](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L93)
+
+Prayer times for the current day.
+
+***
+
 ### previous
 
 > `readonly` **previous**: [`PrayerName`](../type-aliases/PrayerName.md) \| `null`
 
-Defined in: src/prayer-times/next-prayer.ts:71
+Defined in: [src/prayer-times/next-prayer.ts:88](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L88)
 
 Previous prayer (the one before current).

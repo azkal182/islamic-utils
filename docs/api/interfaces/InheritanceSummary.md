@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: InheritanceSummary
 
-Defined in: [src/inheritance/types.ts:389](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L389)
+Defined in: [src/inheritance/types.ts:389](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L389)
 
 Summary of the inheritance calculation.
 
@@ -16,7 +16,7 @@ Summary of the inheritance calculation.
 
 > `readonly` **aulApplied**: `boolean`
 
-Defined in: [src/inheritance/types.ts:398](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L398)
+Defined in: [src/inheritance/types.ts:398](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L398)
 
 Whether Aul was applied.
 
@@ -26,7 +26,7 @@ Whether Aul was applied.
 
 > `readonly` `optional` **aulNewDenominator**: `number`
 
-Defined in: [src/inheritance/types.ts:413](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L413)
+Defined in: [src/inheritance/types.ts:413](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L413)
 
 New denominator after Aul.
 
@@ -36,7 +36,7 @@ New denominator after Aul.
 
 > `readonly` `optional` **aulOriginalDenominator**: `number`
 
-Defined in: [src/inheritance/types.ts:408](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L408)
+Defined in: [src/inheritance/types.ts:408](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L408)
 
 Original denominator before Aul.
 
@@ -46,7 +46,7 @@ Original denominator before Aul.
 
 > `readonly` `optional` **aulRatio**: [`Fraction`](Fraction.md)
 
-Defined in: [src/inheritance/types.ts:403](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L403)
+Defined in: [src/inheritance/types.ts:403](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L403)
 
 Aul adjustment ratio if applied.
 
@@ -56,7 +56,7 @@ Aul adjustment ratio if applied.
 
 > `readonly` **raddApplied**: `boolean`
 
-Defined in: [src/inheritance/types.ts:418](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L418)
+Defined in: [src/inheritance/types.ts:418](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L418)
 
 Whether Radd was applied.
 
@@ -66,7 +66,7 @@ Whether Radd was applied.
 
 > `readonly` `optional` **raddRemainder**: [`Fraction`](Fraction.md)
 
-Defined in: [src/inheritance/types.ts:423](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L423)
+Defined in: [src/inheritance/types.ts:423](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L423)
 
 Remainder that was redistributed.
 
@@ -76,7 +76,7 @@ Remainder that was redistributed.
 
 > `readonly` `optional` **specialCase**: `string`
 
-Defined in: [src/inheritance/types.ts:428](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L428)
+Defined in: [src/inheritance/types.ts:428](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L428)
 
 Special case that was applied (if any).
 
@@ -86,7 +86,7 @@ Special case that was applied (if any).
 
 > `readonly` `optional` **specialCaseArabic**: `string`
 
-Defined in: [src/inheritance/types.ts:433](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L433)
+Defined in: [src/inheritance/types.ts:433](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L433)
 
 Special case Arabic name.
 
@@ -96,6 +96,6 @@ Special case Arabic name.
 
 > `readonly` **totalDistributed**: `number`
 
-Defined in: [src/inheritance/types.ts:393](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L393)
+Defined in: [src/inheritance/types.ts:393](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L393)
 
 Total value distributed.

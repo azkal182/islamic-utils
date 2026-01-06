@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TraceStep
 
-Defined in: [src/core/types/result.ts:53](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L53)
+Defined in: [src/core/types/result.ts:53](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L53)
 
 Represents a single step in a calculation trace.
 
@@ -39,7 +39,7 @@ const trace: TraceStep = {
 
 > `readonly` `optional` **calculation**: `string`
 
-Defined in: [src/core/types/result.ts:70](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L70)
+Defined in: [src/core/types/result.ts:70](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L70)
 
 Optional formula or calculation performed.
 
@@ -53,7 +53,7 @@ Use this to show the mathematical formula applied.
 
 > `readonly` **description**: `string`
 
-Defined in: [src/core/types/result.ts:62](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L62)
+Defined in: [src/core/types/result.ts:62](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L62)
 
 Human-readable description of what this step does.
 
@@ -63,7 +63,7 @@ Human-readable description of what this step does.
 
 > `readonly` **step**: `number`
 
-Defined in: [src/core/types/result.ts:57](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L57)
+Defined in: [src/core/types/result.ts:57](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L57)
 
 Sequential step number (1-indexed).
 
@@ -73,7 +73,7 @@ Sequential step number (1-indexed).
 
 > `readonly` `optional` **subSteps**: `TraceStep`[]
 
-Defined in: [src/core/types/result.ts:83](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L83)
+Defined in: [src/core/types/result.ts:83](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L83)
 
 Optional sub-steps for complex calculations.
 
@@ -83,7 +83,7 @@ Optional sub-steps for complex calculations.
 
 > `readonly` `optional` **value**: `unknown`
 
-Defined in: [src/core/types/result.ts:78](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L78)
+Defined in: [src/core/types/result.ts:78](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L78)
 
 Optional result value of this step.
 

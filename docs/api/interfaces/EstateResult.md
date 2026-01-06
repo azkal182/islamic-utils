@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: EstateResult
 
-Defined in: [src/inheritance/types.ts:313](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L313)
+Defined in: [src/inheritance/types.ts:313](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L313)
 
 Estate calculation result.
 
@@ -16,7 +16,7 @@ Estate calculation result.
 
 > `readonly` **currency**: `string`
 
-Defined in: [src/inheritance/types.ts:323](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L323)
+Defined in: [src/inheritance/types.ts:323](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L323)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/inheritance/types.ts:323](https://github.com/azkal182/islamic-u
 
 > `readonly` **deductions**: `object`
 
-Defined in: [src/inheritance/types.ts:315](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L315)
+Defined in: [src/inheritance/types.ts:315](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L315)
 
 #### debts
 
@@ -52,7 +52,7 @@ Defined in: [src/inheritance/types.ts:315](https://github.com/azkal182/islamic-u
 
 > `readonly` **grossValue**: `number`
 
-Defined in: [src/inheritance/types.ts:314](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L314)
+Defined in: [src/inheritance/types.ts:314](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L314)
 
 ***
 
@@ -60,4 +60,4 @@ Defined in: [src/inheritance/types.ts:314](https://github.com/azkal182/islamic-u
 
 > `readonly` **netEstate**: `number`
 
-Defined in: [src/inheritance/types.ts:322](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L322)
+Defined in: [src/inheritance/types.ts:322](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L322)

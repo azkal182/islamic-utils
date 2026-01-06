@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: InheritanceMeta
 
-Defined in: [src/inheritance/types.ts:439](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L439)
+Defined in: [src/inheritance/types.ts:439](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L439)
 
 Metadata about the calculation.
 
@@ -16,7 +16,7 @@ Metadata about the calculation.
 
 > `readonly` **asalMasalah**: `number`
 
-Defined in: [src/inheritance/types.ts:458](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L458)
+Defined in: [src/inheritance/types.ts:458](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L458)
 
 Base denominator (Asal Masalah).
 
@@ -26,7 +26,7 @@ Base denominator (Asal Masalah).
 
 > `readonly` **blockedHeirs**: `number`
 
-Defined in: [src/inheritance/types.ts:468](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L468)
+Defined in: [src/inheritance/types.ts:468](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L468)
 
 Number of blocked heirs.
 
@@ -36,7 +36,7 @@ Number of blocked heirs.
 
 > `readonly` **estate**: [`EstateResult`](EstateResult.md)
 
-Defined in: [src/inheritance/types.ts:443](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L443)
+Defined in: [src/inheritance/types.ts:443](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L443)
 
 Estate breakdown.
 
@@ -46,7 +46,7 @@ Estate breakdown.
 
 > `readonly` **flags**: [`DerivedFlags`](DerivedFlags.md)
 
-Defined in: [src/inheritance/types.ts:453](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L453)
+Defined in: [src/inheritance/types.ts:453](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L453)
 
 Derived flags from heirs.
 
@@ -56,7 +56,7 @@ Derived flags from heirs.
 
 > `readonly` **policy**: [`InheritancePolicy`](InheritancePolicy.md)
 
-Defined in: [src/inheritance/types.ts:448](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L448)
+Defined in: [src/inheritance/types.ts:448](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L448)
 
 Policy used for calculation.
 
@@ -66,6 +66,6 @@ Policy used for calculation.
 
 > `readonly` **totalHeirs**: `number`
 
-Defined in: [src/inheritance/types.ts:463](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L463)
+Defined in: [src/inheritance/types.ts:463](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L463)
 
 Number of heirs.

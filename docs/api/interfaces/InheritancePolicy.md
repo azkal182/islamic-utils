@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: InheritancePolicy
 
-Defined in: [src/inheritance/types.ts:114](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L114)
+Defined in: [src/inheritance/types.ts:114](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L114)
 
 Policy configuration for handling scholarly differences (ikhtilaf).
 
@@ -20,7 +20,7 @@ Based on DECISION_MATRIX_WARIS.md Section 3.
 
 > `readonly` **dhawilArhamMode**: `"ENABLED"` \| `"BAITUL_MAL"`
 
-Defined in: [src/inheritance/types.ts:138](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L138)
+Defined in: [src/inheritance/types.ts:138](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L138)
 
 Whether to include Dhawil Arham or assign to Baitul Mal.
 
@@ -36,7 +36,7 @@ Whether to include Dhawil Arham or assign to Baitul Mal.
 
 > `readonly` **grandfatherMode**: `"LIKE_FATHER"` \| `"COMPETE_WITH_SIBLINGS"`
 
-Defined in: [src/inheritance/types.ts:131](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L131)
+Defined in: [src/inheritance/types.ts:131](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L131)
 
 How grandfather is treated with siblings.
 
@@ -57,7 +57,7 @@ How grandfather is treated with siblings.
 
 > `readonly` **motherSiblingRule**: `"COUNT_ALL"` \| `"EXCLUDE_UTERINE"`
 
-Defined in: [src/inheritance/types.ts:145](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L145)
+Defined in: [src/inheritance/types.ts:145](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L145)
 
 How siblings affect mother's share calculation.
 
@@ -73,7 +73,7 @@ How siblings affect mother's share calculation.
 
 > `readonly` **mushtarakahPolicy**: `"STANDARD"` \| `"UMAR"`
 
-Defined in: [src/inheritance/types.ts:155](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L155)
+Defined in: [src/inheritance/types.ts:155](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L155)
 
 Mushtarakah case handling.
 
@@ -94,7 +94,7 @@ Mushtarakah case handling.
 
 > `readonly` **raddIncludesSpouse**: `boolean`
 
-Defined in: [src/inheritance/types.ts:121](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/types.ts#L121)
+Defined in: [src/inheritance/types.ts:121](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/types.ts#L121)
 
 Whether spouse receives radd (remainder redistribution).
 

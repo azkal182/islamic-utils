@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **fractionDayOfYear**(`date`, `hours`): `number`
 
-Defined in: [src/astronomy/time.ts:251](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/astronomy/time.ts#L251)
+Defined in: [src/astronomy/time.ts:251](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/astronomy/time.ts#L251)
 
 Gets the fractional day of the year.
 

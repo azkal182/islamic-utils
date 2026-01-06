@@ -6,10 +6,19 @@
  * which prayer is next based on the current time.
  */
 
-import type { Timezone } from '../core/types';
+import type { Result } from '../core/types';
+import { success, failure } from '../core/types';
+import type { Timezone, DateOnly } from '../core/types';
 import { dateToLocalTime } from '../core/utils/timezone';
-import type { PrayerTimesResult, PrayerName } from './types';
+import { fromJSDate, addDays } from '../core/validators';
+import type {
+  LocationInput,
+  PrayerCalculationParams,
+  PrayerName,
+  PrayerTimesResult,
+} from './types';
 import { PrayerName as PrayerNameConst } from './types';
+import { computePrayerTimes } from './calculator';
 
 // ═══════════════════════════════════════════════════════════════════════════
 // Types
@@ -50,6 +59,14 @@ export interface NextPrayerInfo {
    * True if we've passed Isha and the next prayer is tomorrow's Imsak/Fajr.
    */
   readonly isNextDay: boolean;
+
+  /**
+   * Prayer times for the current day.
+   *
+   * @remarks
+   * Included for convenience if you want to display all times.
+   */
+  readonly prayerTimes: PrayerTimesResult;
 }
 
 /**
@@ -69,6 +86,11 @@ export interface CurrentPrayerInfo {
    * Previous prayer (the one before current).
    */
   readonly previous: PrayerName | null;
+
+  /**
+   * Prayer times for the current day.
+   */
+  readonly prayerTimes: PrayerTimesResult;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -96,36 +118,49 @@ const MAIN_PRAYER_ORDER: readonly PrayerName[] = [
 /**
  * Determines the next prayer based on current time.
  *
- * @param currentTime - JavaScript Date object representing current time
- * @param prayerTimes - Result from computePrayerTimes
+ * @param location - Geographic location (latitude, longitude)
  * @param timezone - IANA timezone name or UTC offset
- * @returns Next prayer information
+ * @param params - Calculation parameters (method, madhhab, etc.)
+ * @param currentTime - Optional, defaults to new Date()
+ * @returns Result containing next prayer info or error
  *
  * @example
  * ```typescript
- * import { computePrayerTimes, getNextPrayer, CALCULATION_METHODS } from '@azkal182/islamic-utils';
+ * import { getNextPrayer, KEMENAG } from '@azkal182/islamic-utils';
  *
- * const result = computePrayerTimes(
+ * const result = getNextPrayer(
  *   { latitude: -6.2088, longitude: 106.8456 },
- *   { date: { year: 2024, month: 1, day: 15 }, timezone: 7 },
- *   { method: CALCULATION_METHODS.KEMENAG }
+ *   'Asia/Jakarta',
+ *   { method: KEMENAG }
  * );
  *
  * if (result.success) {
- *   const next = getNextPrayer(new Date(), result.data, 7);
- *   console.log(`Next: ${next.name} at ${next.time}`);
- *   console.log(`In ${next.minutesUntil} minutes`);
+ *   console.log(`Next: ${result.data.name} at ${result.data.time}`);
+ *   console.log(`In ${result.data.minutesUntil} minutes`);
  * }
  * ```
  */
 export function getNextPrayer(
-  currentTime: Date,
-  prayerTimes: PrayerTimesResult,
-  timezone: Timezone
-): NextPrayerInfo {
+  location: LocationInput,
+  timezone: Timezone,
+  params: PrayerCalculationParams,
+  currentTime: Date = new Date()
+): Result<NextPrayerInfo> {
   // Get current local time
   const local = dateToLocalTime(currentTime, timezone);
   const currentFractional = local.fractionalHours;
+
+  // Extract date from currentTime
+  const date = extractDateFromTime(currentTime, timezone);
+
+  // Calculate prayer times for today
+  const todayResult = computePrayerTimes(location, { date, timezone }, params);
+
+  if (!todayResult.success) {
+    return failure(todayResult.error);
+  }
+
+  const prayerTimes = todayResult.data;
 
   // Find next prayer
   for (const prayer of MAIN_PRAYER_ORDER) {
@@ -137,69 +172,99 @@ export function getNextPrayer(
       // Found next prayer (today)
       const minutesUntil = Math.round((prayerTime - currentFractional) * 60);
 
-      return {
+      return success({
         name: prayer,
         time: prayerTimes.formatted[prayer] ?? '',
         timeNumeric: prayerTime,
         minutesUntil,
         isNextDay: false,
-      };
+        prayerTimes,
+      });
     }
   }
 
   // All prayers have passed - next is tomorrow's Imsak/Fajr
+  const tomorrow = addDays(date, 1);
+  const tomorrowResult = computePrayerTimes(location, { date: tomorrow, timezone }, params);
+
+  if (tomorrowResult.success) {
+    const tomorrowTimes = tomorrowResult.data;
+    const tomorrowImsak = tomorrowTimes.times.imsak ?? tomorrowTimes.times.fajr;
+    const tomorrowPrayer =
+      tomorrowTimes.times.imsak !== null ? PrayerNameConst.IMSAK : PrayerNameConst.FAJR;
+
+    if (tomorrowImsak !== null) {
+      const minutesRemaining = Math.round((24 - currentFractional + tomorrowImsak) * 60);
+
+      return success({
+        name: tomorrowPrayer,
+        time: tomorrowTimes.formatted[tomorrowPrayer] ?? '',
+        timeNumeric: tomorrowImsak,
+        minutesUntil: minutesRemaining,
+        isNextDay: true,
+        prayerTimes, // Still return today's times
+      });
+    }
+  }
+
+  // Fallback if tomorrow calculation fails
   const tomorrowImsak = prayerTimes.times.imsak ?? prayerTimes.times.fajr;
   const tomorrowPrayer =
     prayerTimes.times.imsak !== null ? PrayerNameConst.IMSAK : PrayerNameConst.FAJR;
 
-  if (tomorrowImsak === null) {
-    // Fallback if no times available
-    return {
-      name: PrayerNameConst.FAJR,
-      time: '??:??',
-      timeNumeric: 0,
-      minutesUntil: 0,
-      isNextDay: true,
-    };
-  }
-
-  // Calculate minutes until tomorrow's prayer
-  // (24 - current) + tomorrow = remaining today + time into tomorrow
-  const minutesRemaining = (24 - currentFractional + tomorrowImsak) * 60;
-
-  return {
+  return success({
     name: tomorrowPrayer,
-    time: prayerTimes.formatted[tomorrowPrayer] ?? '',
-    timeNumeric: tomorrowImsak,
-    minutesUntil: Math.round(minutesRemaining),
+    time: prayerTimes.formatted[tomorrowPrayer] ?? '??:??',
+    timeNumeric: tomorrowImsak ?? 0,
+    minutesUntil: tomorrowImsak ? Math.round((24 - currentFractional + tomorrowImsak) * 60) : 0,
     isNextDay: true,
-  };
+    prayerTimes,
+  });
 }
 
 /**
  * Determines the current prayer period.
  *
- * @param currentTime - JavaScript Date object representing current time
- * @param prayerTimes - Result from computePrayerTimes
+ * @param location - Geographic location (latitude, longitude)
  * @param timezone - IANA timezone name or UTC offset
- * @returns Current prayer period info
+ * @param params - Calculation parameters (method, madhhab, etc.)
+ * @param currentTime - Optional, defaults to new Date()
+ * @returns Result containing current prayer info or error
  *
  * @example
  * ```typescript
- * const current = getCurrentPrayer(new Date(), result.data, 7);
- * if (current.current) {
- *   console.log(`Current period: ${current.current}`);
+ * const result = getCurrentPrayer(
+ *   { latitude: -6.2088, longitude: 106.8456 },
+ *   'Asia/Jakarta',
+ *   { method: KEMENAG }
+ * );
+ *
+ * if (result.success && result.data.current) {
+ *   console.log(`Current period: ${result.data.current}`);
  * }
  * ```
  */
 export function getCurrentPrayer(
-  currentTime: Date,
-  prayerTimes: PrayerTimesResult,
-  timezone: Timezone
-): CurrentPrayerInfo {
+  location: LocationInput,
+  timezone: Timezone,
+  params: PrayerCalculationParams,
+  currentTime: Date = new Date()
+): Result<CurrentPrayerInfo> {
   // Get current local time
   const local = dateToLocalTime(currentTime, timezone);
   const currentFractional = local.fractionalHours;
+
+  // Extract date from currentTime
+  const date = extractDateFromTime(currentTime, timezone);
+
+  // Calculate prayer times for today
+  const todayResult = computePrayerTimes(location, { date, timezone }, params);
+
+  if (!todayResult.success) {
+    return failure(todayResult.error);
+  }
+
+  const prayerTimes = todayResult.data;
 
   let current: PrayerName | null = null;
   let previous: PrayerName | null = null;
@@ -219,7 +284,7 @@ export function getCurrentPrayer(
     }
   }
 
-  return { current, previous };
+  return success({ current, previous, prayerTimes });
 }
 
 /**
@@ -248,4 +313,37 @@ export function formatMinutesUntil(minutes: number): string {
   }
 
   return `${hours}h ${remaining}m`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// Helper Functions
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Extracts DateOnly from a JavaScript Date in the given timezone.
+ */
+function extractDateFromTime(date: Date, timezone: Timezone): DateOnly {
+  if (typeof timezone === 'string') {
+    // Use Intl API for IANA timezone
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      timeZone: timezone,
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+    });
+
+    const parts = formatter.formatToParts(date);
+    const year = parseInt(parts.find((p) => p.type === 'year')?.value ?? '2024', 10);
+    const month = parseInt(parts.find((p) => p.type === 'month')?.value ?? '1', 10);
+    const day = parseInt(parts.find((p) => p.type === 'day')?.value ?? '1', 10);
+
+    return { year, month, day };
+  } else {
+    // Simple offset calculation
+    const utcMs = date.getTime();
+    const offsetMs = timezone * 60 * 60 * 1000;
+    const localDate = new Date(utcMs + offsetMs);
+
+    return fromJSDate(localDate);
+  }
 }

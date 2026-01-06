@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **isIanaTimezone**(`tz`): `boolean`
 
-Defined in: src/core/utils/timezone.ts:48
+Defined in: [src/core/utils/timezone.ts:48](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/utils/timezone.ts#L48)
 
 Checks if a timezone string is a valid IANA timezone name.
 

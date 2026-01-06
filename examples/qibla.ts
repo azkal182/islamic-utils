@@ -18,11 +18,12 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════
 
 console.log('='.repeat(60));
-console.log('Example 1: Basic Usage - Jakarta, Indonesia');
+// console.log('Example 1: Basic Usage - Jakarta, Indonesia');
+console.log('Example 1: Basic Usage - Jepara, Indonesia');
 console.log('='.repeat(60));
 
 const jakartaResult = computeQiblaDirection({
-  coordinates: { latitude: -6.2088, longitude: 106.8456 },
+  coordinates: { latitude: -7.0073, longitude: 110.7922 },
 });
 
 if (jakartaResult.success) {

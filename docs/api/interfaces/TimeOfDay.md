@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.1**](../README.md)
+[**Islamic Utilities API v0.2.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TimeOfDay
 
-Defined in: [src/core/types/date.ts:110](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/date.ts#L110)
+Defined in: [src/core/types/date.ts:110](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/date.ts#L110)
 
 Represents a time of day without date information.
 
@@ -36,7 +36,7 @@ const fajrTime: TimeOfDay = {
 
 > `readonly` **hours**: `number`
 
-Defined in: [src/core/types/date.ts:120](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/date.ts#L120)
+Defined in: [src/core/types/date.ts:120](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/date.ts#L120)
 
 Hours in 24-hour format.
 
@@ -53,7 +53,7 @@ Valid range: 0 to 23
 
 > `readonly` **minutes**: `number`
 
-Defined in: [src/core/types/date.ts:128](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/date.ts#L128)
+Defined in: [src/core/types/date.ts:128](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/date.ts#L128)
 
 Minutes within the hour.
 
@@ -67,7 +67,7 @@ Valid range: 0 to 59
 
 > `readonly` `optional` **seconds**: `number`
 
-Defined in: [src/core/types/date.ts:139](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/date.ts#L139)
+Defined in: [src/core/types/date.ts:139](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/date.ts#L139)
 
 Seconds within the minute.
 
