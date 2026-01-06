@@ -39,7 +39,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [Unreleased]
+## [0.2.0] - 2026-01-06
 
-### Planned
-- Inheritance (Faraidh) module
+### Added
+
+#### Inheritance (Faraidh) Module
+- `computeInheritance()` - Complete Islamic inheritance calculator
+- 30+ heir types (spouses, parents, children, siblings, extended family)
+- 7 hijab (blocking) rules for heir exclusion
+- 10 special cases: Umariyatayn, Mushtarakah, Akdariyyah, etc.
+- Furudh (fixed shares) calculator for all standard fractions
+- Asabah (residuary) calculator with priority order
+- Aul (over-subscription) handler
+- Radd (remainder redistribution) handler
+- Estate calculator with wasiyyah 1/3 cap enforcement
+- Rule conflict validator
+- Fraction utilities for precise calculations
+- Full trace mode with Arabic terms
+- Comprehensive unit tests (65+ tests)
+- Golden test suite (124 real-world cases)
+- Example file with 5 demo scenarios
+
+### Changed
+- Updated main entry point to export inheritance module
+- Updated README with inheritance documentation

@@ -273,6 +273,60 @@ export {
 } from './qibla';
 
 // ═══════════════════════════════════════════════════════════════════════════
+// Inheritance (Faraidh) Module
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Main calculator
+export { computeInheritance } from './inheritance';
+
+// Types
+export type {
+  InheritanceInput,
+  InheritanceOptions,
+  InheritanceResult,
+  InheritanceTraceStep,
+  InheritancePolicy,
+  HeirInput,
+  HeirShare,
+  EstateInput,
+  EstateResult,
+  DerivedFlags,
+  InheritanceSummary,
+  InheritanceMeta,
+  Fraction,
+} from './inheritance';
+
+// Enums and constants
+export {
+  HeirType,
+  HeirCategory,
+  ShareCategory,
+  AsabahType,
+  SPECIAL_CASES,
+  DEFAULT_POLICY,
+  getHeirCategory,
+  getHeirArabicName,
+  isMaleHeir,
+  isFemaleHeir,
+} from './inheritance';
+
+// Sub-calculators (for advanced use)
+export { calculateFlags, calculateNetEstate, applyHijab } from './inheritance';
+
+// Fraction utilities
+export {
+  fraction,
+  add as fractionAdd,
+  subtract as fractionSubtract,
+  multiply as fractionMultiply,
+  divide as fractionDivide,
+  simplify as fractionSimplify,
+  toDecimal as fractionToDecimal,
+  toString as fractionToString,
+  FRACTION,
+} from './inheritance';
+
+// ═══════════════════════════════════════════════════════════════════════════
 // Version
 // ═══════════════════════════════════════════════════════════════════════════
 

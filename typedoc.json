@@ -1,0 +1,13 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src/index.ts"],
+  "out": "docs/api",
+  "plugin": ["typedoc-plugin-markdown"],
+  "readme": "none",
+  "name": "Islamic Utilities API",
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "hideGenerator": true,
+  "includeVersion": true,
+  "tsconfig": "./tsconfig.json"
+}
