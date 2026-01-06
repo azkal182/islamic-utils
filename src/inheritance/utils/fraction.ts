@@ -87,8 +87,8 @@ export function fromDecimal(decimal: number, precision: number = 1000): Fraction
   if (decimal === 1) return FRACTION.ONE;
 
   // Simple continued fraction approximation
-  let bestNumerator = Math.round(decimal * precision);
-  let bestDenominator = precision;
+  const bestNumerator = Math.round(decimal * precision);
+  const bestDenominator = precision;
 
   return simplify({ numerator: bestNumerator, denominator: bestDenominator });
 }

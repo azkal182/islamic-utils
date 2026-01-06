@@ -352,7 +352,7 @@ function calculateStandardShares(
   raddRemainder?: Fraction;
 } {
   const trace: InheritanceTraceStep[] = [];
-  let shares = new Map<HeirType, Fraction>();
+  const shares = new Map<HeirType, Fraction>();
 
   // Calculate furudh
   const furudhResult = calculateFurudh(heirs, flags, policy);
