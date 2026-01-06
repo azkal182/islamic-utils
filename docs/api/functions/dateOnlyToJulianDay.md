@@ -8,7 +8,7 @@
 
 > **dateOnlyToJulianDay**(`date`): `number`
 
-Defined in: [src/astronomy/time.ts:24](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/astronomy/time.ts#L24)
+Defined in: [src/astronomy/time.ts:24](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/astronomy/time.ts#L24)
 
 Converts a DateOnly to Julian Day Number (at midnight).
 

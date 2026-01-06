@@ -8,7 +8,7 @@
 
 > **applyHijab**(`heirs`, `flags`): `HijabResult`
 
-Defined in: src/inheritance/rules/hijab.ts:187
+Defined in: [src/inheritance/rules/hijab.ts:187](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/rules/hijab.ts#L187)
 
 Applies Hijab Hirman rules to determine which heirs are blocked.
 

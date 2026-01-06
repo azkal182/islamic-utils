@@ -6,7 +6,7 @@
 
 # Interface: HeirInput
 
-Defined in: src/inheritance/types.ts:216
+Defined in: [src/inheritance/types.ts:216](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L216)
 
 Single heir input.
 
@@ -16,7 +16,7 @@ Single heir input.
 
 > `readonly` **count**: `number`
 
-Defined in: src/inheritance/types.ts:226
+Defined in: [src/inheritance/types.ts:226](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L226)
 
 Number of heirs of this type.
 
@@ -32,6 +32,6 @@ Number of heirs of this type.
 
 > `readonly` **type**: [`HeirType`](../type-aliases/HeirType.md)
 
-Defined in: src/inheritance/types.ts:220
+Defined in: [src/inheritance/types.ts:220](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L220)
 
 Type of heir.

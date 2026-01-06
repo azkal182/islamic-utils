@@ -6,7 +6,7 @@
 
 # Interface: DerivedFlags
 
-Defined in: src/inheritance/types.ts:285
+Defined in: [src/inheritance/types.ts:285](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L285)
 
 Boolean flags derived from heir list.
 
@@ -20,7 +20,7 @@ Based on DECISION_MATRIX_WARIS.md Section 2.
 
 > `readonly` **HAS\_CHILD**: `boolean`
 
-Defined in: src/inheritance/types.ts:286
+Defined in: [src/inheritance/types.ts:286](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L286)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: src/inheritance/types.ts:286
 
 > `readonly` **HAS\_DAUGHTER**: `boolean`
 
-Defined in: src/inheritance/types.ts:288
+Defined in: [src/inheritance/types.ts:288](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L288)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: src/inheritance/types.ts:288
 
 > `readonly` **HAS\_DESCENDANT**: `boolean`
 
-Defined in: src/inheritance/types.ts:291
+Defined in: [src/inheritance/types.ts:291](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L291)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: src/inheritance/types.ts:291
 
 > `readonly` **HAS\_FATHER**: `boolean`
 
-Defined in: src/inheritance/types.ts:292
+Defined in: [src/inheritance/types.ts:292](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L292)
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: src/inheritance/types.ts:292
 
 > `readonly` **HAS\_FULL\_SIBLINGS**: `boolean`
 
-Defined in: src/inheritance/types.ts:299
+Defined in: [src/inheritance/types.ts:299](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L299)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: src/inheritance/types.ts:299
 
 > `readonly` **HAS\_GRANDDAUGHTER**: `boolean`
 
-Defined in: src/inheritance/types.ts:290
+Defined in: [src/inheritance/types.ts:290](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L290)
 
 ***
 
@@ -68,7 +68,7 @@ Defined in: src/inheritance/types.ts:290
 
 > `readonly` **HAS\_GRANDFATHER**: `boolean`
 
-Defined in: src/inheritance/types.ts:294
+Defined in: [src/inheritance/types.ts:294](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L294)
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: src/inheritance/types.ts:294
 
 > `readonly` **HAS\_GRANDMOTHER**: `boolean`
 
-Defined in: src/inheritance/types.ts:295
+Defined in: [src/inheritance/types.ts:295](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L295)
 
 ***
 
@@ -84,7 +84,7 @@ Defined in: src/inheritance/types.ts:295
 
 > `readonly` **HAS\_GRANDSON**: `boolean`
 
-Defined in: src/inheritance/types.ts:289
+Defined in: [src/inheritance/types.ts:289](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L289)
 
 ***
 
@@ -92,7 +92,7 @@ Defined in: src/inheritance/types.ts:289
 
 > `readonly` **HAS\_HUSBAND**: `boolean`
 
-Defined in: src/inheritance/types.ts:301
+Defined in: [src/inheritance/types.ts:301](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L301)
 
 ***
 
@@ -100,7 +100,7 @@ Defined in: src/inheritance/types.ts:301
 
 > `readonly` **HAS\_MOTHER**: `boolean`
 
-Defined in: src/inheritance/types.ts:293
+Defined in: [src/inheritance/types.ts:293](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L293)
 
 ***
 
@@ -108,7 +108,7 @@ Defined in: src/inheritance/types.ts:293
 
 > `readonly` **HAS\_PATERNAL\_SIBLINGS**: `boolean`
 
-Defined in: src/inheritance/types.ts:300
+Defined in: [src/inheritance/types.ts:300](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L300)
 
 ***
 
@@ -116,7 +116,7 @@ Defined in: src/inheritance/types.ts:300
 
 > `readonly` **HAS\_SIBLINGS\_TOTAL**: `number`
 
-Defined in: src/inheritance/types.ts:296
+Defined in: [src/inheritance/types.ts:296](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L296)
 
 ***
 
@@ -124,7 +124,7 @@ Defined in: src/inheritance/types.ts:296
 
 > `readonly` **HAS\_SON**: `boolean`
 
-Defined in: src/inheritance/types.ts:287
+Defined in: [src/inheritance/types.ts:287](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L287)
 
 ***
 
@@ -132,7 +132,7 @@ Defined in: src/inheritance/types.ts:287
 
 > `readonly` **HAS\_SPOUSE**: `boolean`
 
-Defined in: src/inheritance/types.ts:303
+Defined in: [src/inheritance/types.ts:303](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L303)
 
 ***
 
@@ -140,7 +140,7 @@ Defined in: src/inheritance/types.ts:303
 
 > `readonly` **HAS\_TWO\_OR\_MORE\_SIBLINGS**: `boolean`
 
-Defined in: src/inheritance/types.ts:297
+Defined in: [src/inheritance/types.ts:297](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L297)
 
 ***
 
@@ -148,7 +148,7 @@ Defined in: src/inheritance/types.ts:297
 
 > `readonly` **HAS\_UTERINE\_SIBLINGS**: `boolean`
 
-Defined in: src/inheritance/types.ts:298
+Defined in: [src/inheritance/types.ts:298](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L298)
 
 ***
 
@@ -156,4 +156,4 @@ Defined in: src/inheritance/types.ts:298
 
 > `readonly` **HAS\_WIFE**: `boolean`
 
-Defined in: src/inheritance/types.ts:302
+Defined in: [src/inheritance/types.ts:302](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L302)

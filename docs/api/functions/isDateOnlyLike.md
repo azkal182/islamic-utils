@@ -8,7 +8,7 @@
 
 > **isDateOnlyLike**(`obj`): `obj is DateOnly`
 
-Defined in: [src/core/types/date.ts:235](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L235)
+Defined in: [src/core/types/date.ts:235](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L235)
 
 Type guard to check if an object is a valid DateOnly interface.
 

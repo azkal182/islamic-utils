@@ -8,7 +8,7 @@
 
 > **calculateMidpoint**(`from`, `to`): [`Coordinates`](../interfaces/Coordinates.md)
 
-Defined in: [src/qibla/great-circle.ts:136](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/great-circle.ts#L136)
+Defined in: [src/qibla/great-circle.ts:136](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/great-circle.ts#L136)
 
 Calculates the midpoint along a great-circle path between two points.
 

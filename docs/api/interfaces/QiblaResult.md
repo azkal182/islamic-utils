@@ -6,7 +6,7 @@
 
 # Interface: QiblaResult
 
-Defined in: [src/qibla/types.ts:164](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L164)
+Defined in: [src/qibla/types.ts:164](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L164)
 
 Result of Qibla direction calculation.
 
@@ -16,7 +16,7 @@ Result of Qibla direction calculation.
 
 > `readonly` **bearing**: `number`
 
-Defined in: [src/qibla/types.ts:173](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L173)
+Defined in: [src/qibla/types.ts:173](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L173)
 
 Bearing to Ka'bah in degrees.
 
@@ -32,7 +32,7 @@ Bearing to Ka'bah in degrees.
 
 > `readonly` **compassDirection**: [`CompassDirection`](../type-aliases/CompassDirection.md)
 
-Defined in: [src/qibla/types.ts:181](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L181)
+Defined in: [src/qibla/types.ts:181](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L181)
 
 Compass direction (16-point).
 
@@ -46,7 +46,7 @@ e.g., "NNE", "WNW", "SE", etc.
 
 > `readonly` **meta**: [`QiblaMeta`](QiblaMeta.md)
 
-Defined in: [src/qibla/types.ts:186](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L186)
+Defined in: [src/qibla/types.ts:186](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L186)
 
 Metadata about the calculation.
 
@@ -56,7 +56,7 @@ Metadata about the calculation.
 
 > `readonly` `optional` **trace**: [`TraceStep`](TraceStep.md)[]
 
-Defined in: [src/qibla/types.ts:194](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L194)
+Defined in: [src/qibla/types.ts:194](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L194)
 
 Optional trace of calculation steps.
 

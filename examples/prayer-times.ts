@@ -176,6 +176,50 @@ if (tracedResult.success && tracedResult.data.trace) {
   }
 }
 
+// ═══════════════════════════════════════════════════════════════════════════
+// Example 7: Monthly Prayer Times
+// ═══════════════════════════════════════════════════════════════════════════
+
+import { computeMonthlyPrayerTimes } from '../src';
+
+console.log('\n' + '='.repeat(60));
+console.log('Example 7: Monthly Prayer Times - Ramadan 2024');
+console.log('='.repeat(60));
+
+const monthlyResult = computeMonthlyPrayerTimes({
+  year: 2024,
+  month: 3, // March (Ramadan 2024)
+  location: { latitude: -6.2088, longitude: 106.8456 },
+  timezone: 7,
+  params: { method: CALCULATION_METHODS.KEMENAG },
+});
+
+if (monthlyResult.success) {
+  console.log(`\nPrayer times for ${monthlyResult.data.meta.daysInMonth} days of March 2024:`);
+  console.log('');
+  console.log('Day  | Imsak | Fajr  | Dhuhr | Asr   | Maghrib | Isha');
+  console.log('-----|-------|-------|-------|-------|---------|------');
+
+  // Show first 5 days and last 5 days
+  for (const day of monthlyResult.data.days.slice(0, 5)) {
+    console.log(
+      `${String(day.day).padStart(3)}  | ${day.formatted.imsak} | ${day.formatted.fajr}  | ${day.formatted.dhuhr} | ${day.formatted.asr}  | ${day.formatted.maghrib}   | ${day.formatted.isha}`
+    );
+  }
+  console.log('...  |  ...  |  ...  |  ...  |  ...  |   ...   |  ...');
+  for (const day of monthlyResult.data.days.slice(-3)) {
+    console.log(
+      `${String(day.day).padStart(3)}  | ${day.formatted.imsak} | ${day.formatted.fajr}  | ${day.formatted.dhuhr} | ${day.formatted.asr}  | ${day.formatted.maghrib}   | ${day.formatted.isha}`
+    );
+  }
+
+  console.log(
+    `\nMeta: ${monthlyResult.data.meta.method.name} method, ${monthlyResult.data.meta.daysInMonth} days`
+  );
+} else {
+  console.error('Error:', monthlyResult.error.message);
+}
+
 console.log('\n' + '='.repeat(60));
 console.log('Done!');
 console.log('='.repeat(60));

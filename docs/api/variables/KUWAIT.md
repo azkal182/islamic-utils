@@ -8,7 +8,7 @@
 
 > `const` **KUWAIT**: [`CalculationMethod`](../interfaces/CalculationMethod.md)
 
-Defined in: [src/prayer-times/methods/catalog.ts:217](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/prayer-times/methods/catalog.ts#L217)
+Defined in: [src/prayer-times/methods/catalog.ts:217](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/methods/catalog.ts#L217)
 
 Kuwait calculation method.
 

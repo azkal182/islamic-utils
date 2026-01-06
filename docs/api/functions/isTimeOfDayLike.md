@@ -8,7 +8,7 @@
 
 > **isTimeOfDayLike**(`obj`): `obj is TimeOfDay`
 
-Defined in: [src/core/types/date.ts:255](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L255)
+Defined in: [src/core/types/date.ts:255](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L255)
 
 Type guard to check if an object is a valid TimeOfDay interface.
 

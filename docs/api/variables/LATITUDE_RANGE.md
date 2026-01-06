@@ -8,7 +8,7 @@
 
 > `const` **LATITUDE\_RANGE**: `object`
 
-Defined in: [src/core/validators/coordinates.ts:17](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/validators/coordinates.ts#L17)
+Defined in: [src/core/validators/coordinates.ts:17](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/validators/coordinates.ts#L17)
 
 Valid latitude range constants.
 

@@ -8,7 +8,7 @@
 
 > **destinationPoint**(`start`, `bearing`, `distance`): [`Coordinates`](../interfaces/Coordinates.md)
 
-Defined in: [src/astronomy/angles.ts:148](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/astronomy/angles.ts#L148)
+Defined in: [src/astronomy/angles.ts:148](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/astronomy/angles.ts#L148)
 
 Calculates the destination point given start, bearing, and distance.
 

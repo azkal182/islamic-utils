@@ -18,6 +18,15 @@
 // Main calculator
 export { computePrayerTimes } from './calculator';
 
+// Monthly calculator
+export { computeMonthlyPrayerTimes } from './monthly';
+export type {
+  MonthlyPrayerTimesInput,
+  MonthlyPrayerTimesDayResult,
+  MonthlyPrayerTimesMeta,
+  MonthlyPrayerTimesResult,
+} from './monthly';
+
 // Types
 export type {
   LocationInput,

@@ -8,7 +8,7 @@
 
 > **fractionAdd**(`a`, `b`): [`Fraction`](../interfaces/Fraction.md)
 
-Defined in: src/inheritance/utils/fraction.ts:112
+Defined in: [src/inheritance/utils/fraction.ts:112](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/utils/fraction.ts#L112)
 
 Adds two fractions.
 

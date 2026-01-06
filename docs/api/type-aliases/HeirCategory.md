@@ -8,4 +8,4 @@
 
 > **HeirCategory** = *typeof* [`HeirCategory`](../variables/HeirCategory.md)\[keyof *typeof* [`HeirCategory`](../variables/HeirCategory.md)\]
 
-Defined in: src/inheritance/types.ts:69
+Defined in: [src/inheritance/types.ts:69](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L69)

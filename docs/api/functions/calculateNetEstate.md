@@ -8,7 +8,7 @@
 
 > **calculateNetEstate**(`input`): [`Result`](../type-aliases/Result.md)\<\{ `result`: [`EstateResult`](../interfaces/EstateResult.md); `trace`: [`InheritanceTraceStep`](../interfaces/InheritanceTraceStep.md)[]; \}\>
 
-Defined in: src/inheritance/estate.ts:55
+Defined in: [src/inheritance/estate.ts:55](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/estate.ts#L55)
 
 Calculates the net estate after all deductions.
 

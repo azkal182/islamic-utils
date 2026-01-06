@@ -6,7 +6,7 @@
 
 # Interface: DateTimeLocal
 
-Defined in: [src/core/types/date.ts:222](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L222)
+Defined in: [src/core/types/date.ts:222](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L222)
 
 Represents a precise moment in time with full date, time, and timezone.
 
@@ -40,7 +40,7 @@ const fajrMoment: DateTimeLocal = {
 
 > `readonly` **day**: `number`
 
-Defined in: [src/core/types/date.ts:90](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L90)
+Defined in: [src/core/types/date.ts:90](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L90)
 
 Day of the month (1-indexed).
 
@@ -61,7 +61,7 @@ Valid range depends on the month:
 
 > `readonly` **hours**: `number`
 
-Defined in: [src/core/types/date.ts:120](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L120)
+Defined in: [src/core/types/date.ts:120](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L120)
 
 Hours in 24-hour format.
 
@@ -82,7 +82,7 @@ Valid range: 0 to 23
 
 > `readonly` **minutes**: `number`
 
-Defined in: [src/core/types/date.ts:128](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L128)
+Defined in: [src/core/types/date.ts:128](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L128)
 
 Minutes within the hour.
 
@@ -100,7 +100,7 @@ Valid range: 0 to 59
 
 > `readonly` **month**: `number`
 
-Defined in: [src/core/types/date.ts:79](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L79)
+Defined in: [src/core/types/date.ts:79](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L79)
 
 Month of the year (1-indexed).
 
@@ -122,7 +122,7 @@ Valid range: 1 to 12
 
 > `readonly` `optional` **seconds**: `number`
 
-Defined in: [src/core/types/date.ts:139](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L139)
+Defined in: [src/core/types/date.ts:139](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L139)
 
 Seconds within the minute.
 
@@ -147,7 +147,7 @@ Optional for most use cases.
 
 > `readonly` **timezone**: [`Timezone`](../type-aliases/Timezone.md)
 
-Defined in: [src/core/types/date.ts:226](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L226)
+Defined in: [src/core/types/date.ts:226](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L226)
 
 Timezone context for this moment.
 
@@ -157,7 +157,7 @@ Timezone context for this moment.
 
 > `readonly` **year**: `number`
 
-Defined in: [src/core/types/date.ts:67](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/date.ts#L67)
+Defined in: [src/core/types/date.ts:67](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/date.ts#L67)
 
 Full year (4 digits).
 

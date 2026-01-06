@@ -276,4 +276,149 @@ describe('Prayer Times Integration', () => {
       }
     });
   });
+
+  describe('Monthly Prayer Times', () => {
+    it('should export computeMonthlyPrayerTimes function', async () => {
+      const { computeMonthlyPrayerTimes } = await import('../../src');
+      expect(computeMonthlyPrayerTimes).toBeDefined();
+      expect(typeof computeMonthlyPrayerTimes).toBe('function');
+    });
+
+    it('should calculate prayer times for January (31 days)', async () => {
+      const { computeMonthlyPrayerTimes, KEMENAG } = await import('../../src');
+
+      const result = computeMonthlyPrayerTimes({
+        year: 2024,
+        month: 1,
+        location: { latitude: -6.2088, longitude: 106.8456 },
+        timezone: 7,
+        params: { method: KEMENAG },
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.data.meta.daysInMonth).toBe(31);
+        expect(result.data.days).toHaveLength(31);
+        expect(result.data.days[0].day).toBe(1);
+        expect(result.data.days[30].day).toBe(31);
+      }
+    });
+
+    it('should calculate prayer times for February in leap year (29 days)', async () => {
+      const { computeMonthlyPrayerTimes, KEMENAG } = await import('../../src');
+
+      const result = computeMonthlyPrayerTimes({
+        year: 2024, // 2024 is a leap year
+        month: 2,
+        location: { latitude: -6.2088, longitude: 106.8456 },
+        timezone: 7,
+        params: { method: KEMENAG },
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.data.meta.daysInMonth).toBe(29);
+        expect(result.data.meta.isLeapYear).toBe(true);
+        expect(result.data.days).toHaveLength(29);
+      }
+    });
+
+    it('should calculate prayer times for February in non-leap year (28 days)', async () => {
+      const { computeMonthlyPrayerTimes, KEMENAG } = await import('../../src');
+
+      const result = computeMonthlyPrayerTimes({
+        year: 2023, // 2023 is not a leap year
+        month: 2,
+        location: { latitude: -6.2088, longitude: 106.8456 },
+        timezone: 7,
+        params: { method: KEMENAG },
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.data.meta.daysInMonth).toBe(28);
+        expect(result.data.meta.isLeapYear).toBe(false);
+        expect(result.data.days).toHaveLength(28);
+      }
+    });
+
+    it('should return valid formatted times for all days', async () => {
+      const { computeMonthlyPrayerTimes, KEMENAG } = await import('../../src');
+
+      const result = computeMonthlyPrayerTimes({
+        year: 2024,
+        month: 4,
+        location: { latitude: -6.2088, longitude: 106.8456 },
+        timezone: 7,
+        params: { method: KEMENAG },
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        for (const day of result.data.days) {
+          // Each day should have formatted times
+          expect(day.formatted.fajr).toMatch(/^\d{2}:\d{2}$/);
+          expect(day.formatted.dhuhr).toMatch(/^\d{2}:\d{2}$/);
+          expect(day.formatted.asr).toMatch(/^\d{2}:\d{2}$/);
+          expect(day.formatted.maghrib).toMatch(/^\d{2}:\d{2}$/);
+          expect(day.formatted.isha).toMatch(/^\d{2}:\d{2}$/);
+        }
+      }
+    });
+
+    it('should return error for invalid month', async () => {
+      const { computeMonthlyPrayerTimes, KEMENAG } = await import('../../src');
+
+      const result = computeMonthlyPrayerTimes({
+        year: 2024,
+        month: 13, // Invalid
+        location: { latitude: -6.2088, longitude: 106.8456 },
+        timezone: 7,
+        params: { method: KEMENAG },
+      });
+
+      expect(result.success).toBe(false);
+      if (!result.success) {
+        expect(result.error.code).toBe('INVALID_DATE');
+      }
+    });
+
+    it('should return error for invalid year', async () => {
+      const { computeMonthlyPrayerTimes, KEMENAG } = await import('../../src');
+
+      const result = computeMonthlyPrayerTimes({
+        year: 1800, // Too old
+        month: 1,
+        location: { latitude: -6.2088, longitude: 106.8456 },
+        timezone: 7,
+        params: { method: KEMENAG },
+      });
+
+      expect(result.success).toBe(false);
+      if (!result.success) {
+        expect(result.error.code).toBe('INVALID_DATE');
+      }
+    });
+
+    it('should include meta information', async () => {
+      const { computeMonthlyPrayerTimes, KEMENAG } = await import('../../src');
+
+      const result = computeMonthlyPrayerTimes({
+        year: 2024,
+        month: 6,
+        location: { latitude: -6.2088, longitude: 106.8456 },
+        timezone: 7,
+        params: { method: KEMENAG },
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.data.meta.year).toBe(2024);
+        expect(result.data.meta.month).toBe(6);
+        expect(result.data.meta.daysInMonth).toBe(30);
+        expect(result.data.meta.method.name).toBe(KEMENAG.name);
+        expect(result.data.meta.location.latitude).toBe(-6.2088);
+      }
+    });
+  });
 });

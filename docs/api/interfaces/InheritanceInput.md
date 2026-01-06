@@ -6,7 +6,7 @@
 
 # Interface: InheritanceInput
 
-Defined in: src/inheritance/types.ts:242
+Defined in: [src/inheritance/types.ts:242](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L242)
 
 Main input for inheritance calculation.
 
@@ -16,7 +16,7 @@ Main input for inheritance calculation.
 
 > `readonly` **deceased**: `DeceasedInfo`
 
-Defined in: src/inheritance/types.ts:256
+Defined in: [src/inheritance/types.ts:256](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L256)
 
 Deceased person information.
 
@@ -26,7 +26,7 @@ Deceased person information.
 
 > `readonly` **estate**: [`EstateInput`](EstateInput.md)
 
-Defined in: src/inheritance/types.ts:246
+Defined in: [src/inheritance/types.ts:246](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L246)
 
 Estate information.
 
@@ -36,7 +36,7 @@ Estate information.
 
 > `readonly` **heirs**: [`HeirInput`](HeirInput.md)[]
 
-Defined in: src/inheritance/types.ts:251
+Defined in: [src/inheritance/types.ts:251](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L251)
 
 List of heirs.
 
@@ -46,6 +46,6 @@ List of heirs.
 
 > `readonly` `optional` **policy**: `Partial`\<[`InheritancePolicy`](InheritancePolicy.md)\>
 
-Defined in: src/inheritance/types.ts:261
+Defined in: [src/inheritance/types.ts:261](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L261)
 
 Optional policy overrides.

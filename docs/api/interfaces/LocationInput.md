@@ -6,7 +6,7 @@
 
 # Interface: LocationInput
 
-Defined in: [src/prayer-times/types.ts:572](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/prayer-times/types.ts#L572)
+Defined in: [src/prayer-times/types.ts:572](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L572)
 
 Location input for prayer time calculation.
 
@@ -21,7 +21,7 @@ Altitude is optional and used for more precise sunrise/sunset.
 
 > `readonly` `optional` **altitude**: `number`
 
-Defined in: [src/prayer-times/types.ts:586](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/prayer-times/types.ts#L586)
+Defined in: [src/prayer-times/types.ts:586](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L586)
 
 Optional altitude in meters above sea level.
 
@@ -31,7 +31,7 @@ Optional altitude in meters above sea level.
 
 > `readonly` **latitude**: `number`
 
-Defined in: [src/prayer-times/types.ts:576](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/prayer-times/types.ts#L576)
+Defined in: [src/prayer-times/types.ts:576](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L576)
 
 Latitude in degrees (-90 to 90, positive = North).
 
@@ -41,6 +41,6 @@ Latitude in degrees (-90 to 90, positive = North).
 
 > `readonly` **longitude**: `number`
 
-Defined in: [src/prayer-times/types.ts:581](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/prayer-times/types.ts#L581)
+Defined in: [src/prayer-times/types.ts:581](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L581)
 
 Longitude in degrees (-180 to 180, positive = East).

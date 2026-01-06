@@ -8,7 +8,7 @@
 
 > `const` **HeirType**: `object`
 
-Defined in: src/inheritance/types.ts:22
+Defined in: [src/inheritance/types.ts:22](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L22)
 
 All possible heir types in Islamic inheritance.
 

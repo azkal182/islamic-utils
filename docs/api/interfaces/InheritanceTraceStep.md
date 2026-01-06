@@ -6,7 +6,7 @@
 
 # Interface: InheritanceTraceStep
 
-Defined in: src/inheritance/types.ts:474
+Defined in: [src/inheritance/types.ts:474](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L474)
 
 Inheritance-specific trace step.
 
@@ -20,7 +20,7 @@ Inheritance-specific trace step.
 
 > `readonly` `optional` **arabicTerm**: `string`
 
-Defined in: src/inheritance/types.ts:494
+Defined in: [src/inheritance/types.ts:494](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L494)
 
 Arabic term for this step (for verification with kitab).
 
@@ -30,7 +30,7 @@ Arabic term for this step (for verification with kitab).
 
 > `readonly` `optional` **calculation**: `string`
 
-Defined in: [src/core/types/result.ts:70](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/result.ts#L70)
+Defined in: [src/core/types/result.ts:70](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L70)
 
 Optional formula or calculation performed.
 
@@ -48,7 +48,7 @@ Use this to show the mathematical formula applied.
 
 > `readonly` **description**: `string`
 
-Defined in: [src/core/types/result.ts:62](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/result.ts#L62)
+Defined in: [src/core/types/result.ts:62](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L62)
 
 Human-readable description of what this step does.
 
@@ -62,7 +62,7 @@ Human-readable description of what this step does.
 
 > `readonly` `optional` **formula**: `string`
 
-Defined in: src/inheritance/types.ts:499
+Defined in: [src/inheritance/types.ts:499](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L499)
 
 Calculation formula if applicable.
 
@@ -72,7 +72,7 @@ Calculation formula if applicable.
 
 > `readonly` **phase**: `"FURUDH"` \| `"ASABAH"` \| `"VALIDATION"` \| `"ESTATE"` \| `"FLAGS"` \| `"HIJAB"` \| `"SPECIAL_CASE"` \| `"AUL"` \| `"RADD"` \| `"DISTRIBUTION"` \| `"VERIFICATION"`
 
-Defined in: src/inheritance/types.ts:478
+Defined in: [src/inheritance/types.ts:478](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L478)
 
 Phase of calculation.
 
@@ -82,7 +82,7 @@ Phase of calculation.
 
 > `readonly` `optional` **reference**: `string`
 
-Defined in: src/inheritance/types.ts:504
+Defined in: [src/inheritance/types.ts:504](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L504)
 
 Reference to kitab/source.
 
@@ -92,7 +92,7 @@ Reference to kitab/source.
 
 > `readonly` **step**: `number`
 
-Defined in: [src/core/types/result.ts:57](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/result.ts#L57)
+Defined in: [src/core/types/result.ts:57](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L57)
 
 Sequential step number (1-indexed).
 
@@ -106,7 +106,7 @@ Sequential step number (1-indexed).
 
 > `readonly` `optional` **subSteps**: [`TraceStep`](TraceStep.md)[]
 
-Defined in: [src/core/types/result.ts:83](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/result.ts#L83)
+Defined in: [src/core/types/result.ts:83](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L83)
 
 Optional sub-steps for complex calculations.
 
@@ -120,7 +120,7 @@ Optional sub-steps for complex calculations.
 
 > `readonly` `optional` **value**: `unknown`
 
-Defined in: [src/core/types/result.ts:78](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/result.ts#L78)
+Defined in: [src/core/types/result.ts:78](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L78)
 
 Optional result value of this step.
 

@@ -6,7 +6,7 @@
 
 # Interface: EstateResult
 
-Defined in: src/inheritance/types.ts:313
+Defined in: [src/inheritance/types.ts:313](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L313)
 
 Estate calculation result.
 
@@ -16,7 +16,7 @@ Estate calculation result.
 
 > `readonly` **currency**: `string`
 
-Defined in: src/inheritance/types.ts:323
+Defined in: [src/inheritance/types.ts:323](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L323)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: src/inheritance/types.ts:323
 
 > `readonly` **deductions**: `object`
 
-Defined in: src/inheritance/types.ts:315
+Defined in: [src/inheritance/types.ts:315](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L315)
 
 #### debts
 
@@ -52,7 +52,7 @@ Defined in: src/inheritance/types.ts:315
 
 > `readonly` **grossValue**: `number`
 
-Defined in: src/inheritance/types.ts:314
+Defined in: [src/inheritance/types.ts:314](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L314)
 
 ***
 
@@ -60,4 +60,4 @@ Defined in: src/inheritance/types.ts:314
 
 > `readonly` **netEstate**: `number`
 
-Defined in: src/inheritance/types.ts:322
+Defined in: [src/inheritance/types.ts:322](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L322)

@@ -8,7 +8,7 @@
 
 > **fraction**(`numerator`, `denominator`): [`Fraction`](../interfaces/Fraction.md)
 
-Defined in: src/inheritance/utils/fraction.ts:64
+Defined in: [src/inheritance/utils/fraction.ts:64](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/utils/fraction.ts#L64)
 
 Creates a fraction from numerator and denominator.
 

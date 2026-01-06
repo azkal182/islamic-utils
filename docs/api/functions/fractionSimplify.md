@@ -8,7 +8,7 @@
 
 > **fractionSimplify**(`f`): [`Fraction`](../interfaces/Fraction.md)
 
-Defined in: src/inheritance/utils/fraction.ts:276
+Defined in: [src/inheritance/utils/fraction.ts:276](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/utils/fraction.ts#L276)
 
 Simplifies a fraction to its lowest terms.
 

@@ -8,7 +8,7 @@
 
 > `const` **Errors**: `object`
 
-Defined in: [src/core/errors/error.ts:170](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/errors/error.ts#L170)
+Defined in: [src/core/errors/error.ts:170](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/errors/error.ts#L170)
 
 Pre-built error factory functions for common error types.
 

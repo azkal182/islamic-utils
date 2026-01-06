@@ -8,7 +8,7 @@
 
 > **getDayOfYear**(`date`): `number`
 
-Defined in: [src/core/validators/date.ts:196](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/validators/date.ts#L196)
+Defined in: [src/core/validators/date.ts:196](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/validators/date.ts#L196)
 
 Gets the day of the year (1-366).
 

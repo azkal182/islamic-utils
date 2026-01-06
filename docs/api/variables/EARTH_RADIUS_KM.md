@@ -8,7 +8,7 @@
 
 > `const` **EARTH\_RADIUS\_KM**: `6371.0088` = `6371.0088`
 
-Defined in: [src/core/constants/kaaba.ts:77](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/constants/kaaba.ts#L77)
+Defined in: [src/core/constants/kaaba.ts:77](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/constants/kaaba.ts#L77)
 
 Earth's mean radius in kilometers.
 

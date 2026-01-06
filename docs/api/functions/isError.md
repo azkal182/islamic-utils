@@ -8,7 +8,7 @@
 
 > **isError**\<`T`\>(`result`): `result is ErrorResult`
 
-Defined in: [src/core/types/result.ts:240](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/result.ts#L240)
+Defined in: [src/core/types/result.ts:240](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L240)
 
 Type guard to check if a result is an error.
 

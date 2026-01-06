@@ -173,7 +173,60 @@ For locations above ~48.5° where sun may not reach required angles:
 | `ONE_SEVENTH` | Night portion = 1/7 of total night |
 | `ANGLE_BASED` | Proportional to angle vs night duration |
 
+### Monthly Prayer Times
+
+Calculate prayer times for an entire month with a single function call:
+
+```typescript
+import { computeMonthlyPrayerTimes, CALCULATION_METHODS } from '@azkal182/islamic-utils';
+
+const result = computeMonthlyPrayerTimes({
+  year: 2024,
+  month: 3,  // March
+  location: { latitude: -6.2088, longitude: 106.8456 },
+  timezone: 7,
+  params: { method: CALCULATION_METHODS.KEMENAG },
+});
+
+if (result.success) {
+  // Access all days
+  console.log(`Days in month: ${result.data.meta.daysInMonth}`);
+
+  // Iterate through each day
+  for (const day of result.data.days) {
+    console.log(`Day ${day.day}: Fajr ${day.formatted.fajr}, Maghrib ${day.formatted.maghrib}`);
+  }
+
+  // Access specific day (0-indexed)
+  const day15 = result.data.days[14]; // Day 15
+  console.log(`Day 15 Fajr: ${day15.formatted.fajr}`);
+}
+```
+
+**Return Type:**
+
+```typescript
+interface MonthlyPrayerTimesResult {
+  days: Array<{
+    day: number;           // 1-31
+    date: DateOnly;        // { year, month, day }
+    times: PrayerTimes;    // Fractional hours
+    formatted: PrayerTimeStrings; // "HH:MM" format
+  }>;
+  meta: {
+    year: number;
+    month: number;
+    daysInMonth: number;
+    isLeapYear: boolean;
+    location: LocationInput;
+    timezone: Timezone;
+    method: CalculationMethod;
+  };
+}
+```
+
 ---
+
 
 ## 🧭 Qibla Direction Module
 

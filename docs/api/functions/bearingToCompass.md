@@ -8,7 +8,7 @@
 
 > **bearingToCompass**(`bearing`, `precision`): `string`
 
-Defined in: [src/astronomy/angles.ts:193](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/astronomy/angles.ts#L193)
+Defined in: [src/astronomy/angles.ts:193](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/astronomy/angles.ts#L193)
 
 Formats a bearing as a compass direction.
 

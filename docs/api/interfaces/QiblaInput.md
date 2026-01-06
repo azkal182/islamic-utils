@@ -6,7 +6,7 @@
 
 # Interface: QiblaInput
 
-Defined in: [src/qibla/types.ts:35](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L35)
+Defined in: [src/qibla/types.ts:35](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L35)
 
 Input for Qibla direction calculation.
 
@@ -16,6 +16,6 @@ Input for Qibla direction calculation.
 
 > `readonly` **coordinates**: [`Coordinates`](Coordinates.md)
 
-Defined in: [src/qibla/types.ts:39](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L39)
+Defined in: [src/qibla/types.ts:39](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L39)
 
 Geographic coordinates of the user's location.

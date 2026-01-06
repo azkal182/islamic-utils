@@ -8,7 +8,7 @@
 
 > `const` **HighLatitudeRule**: `object`
 
-Defined in: [src/prayer-times/types.ts:140](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/prayer-times/types.ts#L140)
+Defined in: [src/prayer-times/types.ts:140](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L140)
 
 Rules for calculating Fajr and Isha at high latitudes.
 

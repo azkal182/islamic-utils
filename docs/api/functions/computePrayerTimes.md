@@ -8,7 +8,7 @@
 
 > **computePrayerTimes**(`location`, `timeContext`, `params`, `options`): [`Result`](../type-aliases/Result.md)\<[`PrayerTimesResult`](../interfaces/PrayerTimesResult.md)\>
 
-Defined in: [src/prayer-times/calculator.ts:167](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/prayer-times/calculator.ts#L167)
+Defined in: [src/prayer-times/calculator.ts:167](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/calculator.ts#L167)
 
 Computes all prayer times for a given location, date, and parameters.
 

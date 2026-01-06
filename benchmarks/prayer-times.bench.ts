@@ -93,3 +93,50 @@ describe('Prayer Times Performance', () => {
     }
   });
 });
+
+import { computeMonthlyPrayerTimes } from '../src';
+
+describe('Monthly Prayer Times Performance', () => {
+  bench('computeMonthlyPrayerTimes - 1 month (31 days)', () => {
+    computeMonthlyPrayerTimes({
+      year: 2024,
+      month: 1, // January = 31 days
+      location: JAKARTA,
+      timezone: 7,
+      params: { method: KEMENAG },
+    });
+  });
+
+  bench('computeMonthlyPrayerTimes - February leap year (29 days)', () => {
+    computeMonthlyPrayerTimes({
+      year: 2024,
+      month: 2,
+      location: JAKARTA,
+      timezone: 7,
+      params: { method: KEMENAG },
+    });
+  });
+
+  bench('computeMonthlyPrayerTimes vs manual loop (30 days)', () => {
+    // Using the new function
+    computeMonthlyPrayerTimes({
+      year: 2024,
+      month: 4, // April = 30 days
+      location: JAKARTA,
+      timezone: 7,
+      params: { method: KEMENAG },
+    });
+  });
+
+  bench('12 months (full year) using monthly function', () => {
+    for (let month = 1; month <= 12; month++) {
+      computeMonthlyPrayerTimes({
+        year: 2024,
+        month,
+        location: JAKARTA,
+        timezone: 7,
+        params: { method: KEMENAG },
+      });
+    }
+  });
+});

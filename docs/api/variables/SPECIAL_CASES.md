@@ -8,6 +8,6 @@
 
 > `const` **SPECIAL\_CASES**: `SpecialCase`[]
 
-Defined in: src/inheritance/types.ts:586
+Defined in: [src/inheritance/types.ts:586](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L586)
 
 All special cases in priority order.

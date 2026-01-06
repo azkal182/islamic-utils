@@ -199,7 +199,15 @@ export {
 // ═══════════════════════════════════════════════════════════════════════════
 
 // Main calculator
-export { computePrayerTimes } from './prayer-times';
+export { computePrayerTimes, computeMonthlyPrayerTimes } from './prayer-times';
+
+// Monthly types
+export type {
+  MonthlyPrayerTimesInput,
+  MonthlyPrayerTimesDayResult,
+  MonthlyPrayerTimesMeta,
+  MonthlyPrayerTimesResult,
+} from './prayer-times';
 
 // Types
 export type {

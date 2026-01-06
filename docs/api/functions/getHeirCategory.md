@@ -8,7 +8,7 @@
 
 > **getHeirCategory**(`type`): [`HeirCategory`](../type-aliases/HeirCategory.md)
 
-Defined in: src/inheritance/types.ts:699
+Defined in: [src/inheritance/types.ts:699](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L699)
 
 Gets the category of a heir type.
 

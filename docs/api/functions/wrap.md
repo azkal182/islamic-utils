@@ -8,7 +8,7 @@
 
 > **wrap**(`value`, `min`, `max`): `number`
 
-Defined in: [src/core/utils/math.ts:201](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/utils/math.ts#L201)
+Defined in: [src/core/utils/math.ts:201](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/utils/math.ts#L201)
 
 Wraps a value to be within a range [min, max).
 

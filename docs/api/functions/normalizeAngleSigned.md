@@ -8,7 +8,7 @@
 
 > **normalizeAngleSigned**(`degrees`): `number`
 
-Defined in: [src/core/types/angle.ts:190](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/types/angle.ts#L190)
+Defined in: [src/core/types/angle.ts:190](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/angle.ts#L190)
 
 Normalizes an angle to be within the range [-180, 180).
 

@@ -8,6 +8,6 @@
 
 > `const` **DEFAULT\_DHUHA\_RULE**: [`DhuhaRule`](../interfaces/DhuhaRule.md)
 
-Defined in: [src/prayer-times/types.ts:291](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/prayer-times/types.ts#L291)
+Defined in: [src/prayer-times/types.ts:291](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L291)
 
 Default Dhuha rule: 15 minutes after sunrise, ends 1 minute before Dhuhr.

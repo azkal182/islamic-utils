@@ -8,7 +8,7 @@
 
 > `const` **ErrorCodes**: `object`
 
-Defined in: [src/core/errors/codes.ts:31](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/errors/codes.ts#L31)
+Defined in: [src/core/errors/codes.ts:31](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/errors/codes.ts#L31)
 
 All error codes used by the library.
 

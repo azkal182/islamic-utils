@@ -8,7 +8,7 @@
 
 > **fractionDivide**(`a`, `b`): [`Fraction`](../interfaces/Fraction.md)
 
-Defined in: src/inheritance/utils/fraction.ts:163
+Defined in: [src/inheritance/utils/fraction.ts:163](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/utils/fraction.ts#L163)
 
 Divides first fraction by second.
 

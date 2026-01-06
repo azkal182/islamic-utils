@@ -6,7 +6,7 @@
 
 # Interface: EstateInput
 
-Defined in: src/inheritance/types.ts:176
+Defined in: [src/inheritance/types.ts:176](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L176)
 
 Estate (harta warisan) input.
 
@@ -16,7 +16,7 @@ Estate (harta warisan) input.
 
 > `readonly` `optional` **currency**: `string`
 
-Defined in: src/inheritance/types.ts:210
+Defined in: [src/inheritance/types.ts:210](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L210)
 
 Currency code for display purposes.
 
@@ -32,7 +32,7 @@ Currency code for display purposes.
 
 > `readonly` `optional` **debts**: `number`
 
-Defined in: src/inheritance/types.ts:186
+Defined in: [src/inheritance/types.ts:186](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L186)
 
 Outstanding debts.
 
@@ -48,7 +48,7 @@ Outstanding debts.
 
 > `readonly` `optional` **funeralCosts**: `number`
 
-Defined in: src/inheritance/types.ts:192
+Defined in: [src/inheritance/types.ts:192](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L192)
 
 Funeral costs (tajhiz).
 
@@ -64,7 +64,7 @@ Funeral costs (tajhiz).
 
 > `readonly` **grossValue**: `number`
 
-Defined in: src/inheritance/types.ts:180
+Defined in: [src/inheritance/types.ts:180](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L180)
 
 Gross value of the estate.
 
@@ -74,7 +74,7 @@ Gross value of the estate.
 
 > `readonly` `optional` **wasiyyah**: `number`
 
-Defined in: src/inheritance/types.ts:198
+Defined in: [src/inheritance/types.ts:198](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L198)
 
 Bequest (wasiyyah) - will be limited to 1/3 of remaining.
 
@@ -90,7 +90,7 @@ Bequest (wasiyyah) - will be limited to 1/3 of remaining.
 
 > `readonly` `optional` **wasiyyahApprovedByHeirs**: `boolean`
 
-Defined in: src/inheritance/types.ts:204
+Defined in: [src/inheritance/types.ts:204](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L204)
 
 If true, wasiyyah can exceed 1/3 (approved by heirs).
 

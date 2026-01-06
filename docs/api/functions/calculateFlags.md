@@ -8,7 +8,7 @@
 
 > **calculateFlags**(`heirs`): [`DerivedFlags`](../interfaces/DerivedFlags.md)
 
-Defined in: src/inheritance/flags.ts:40
+Defined in: [src/inheritance/flags.ts:40](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/flags.ts#L40)
 
 Calculates derived flags from the list of heirs.
 

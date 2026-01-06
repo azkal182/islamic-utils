@@ -8,7 +8,7 @@
 
 > **getHeirArabicName**(`type`): `string`
 
-Defined in: src/inheritance/types.ts:742
+Defined in: [src/inheritance/types.ts:742](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L742)
 
 Gets Arabic name for a heir type.
 

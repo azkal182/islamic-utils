@@ -8,7 +8,7 @@
 
 > **timeOfDayToFractionalHours**(`time`): `number`
 
-Defined in: [src/astronomy/time.ts:135](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/astronomy/time.ts#L135)
+Defined in: [src/astronomy/time.ts:135](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/astronomy/time.ts#L135)
 
 Converts TimeOfDay to fractional hours.
 

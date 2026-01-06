@@ -6,7 +6,7 @@
 
 # Interface: QiblaOptions
 
-Defined in: [src/qibla/types.ts:45](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L45)
+Defined in: [src/qibla/types.ts:45](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L45)
 
 Options for Qibla calculation.
 
@@ -16,7 +16,7 @@ Options for Qibla calculation.
 
 > `readonly` `optional` **includeDistance**: `boolean`
 
-Defined in: [src/qibla/types.ts:62](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L62)
+Defined in: [src/qibla/types.ts:62](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L62)
 
 Whether to include the distance to Ka'bah.
 
@@ -31,7 +31,7 @@ Defaults to false.
 
 > `readonly` `optional` **includeTrace**: `boolean`
 
-Defined in: [src/qibla/types.ts:53](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L53)
+Defined in: [src/qibla/types.ts:53](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L53)
 
 Whether to include a trace of calculation steps.
 

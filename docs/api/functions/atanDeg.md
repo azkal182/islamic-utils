@@ -8,7 +8,7 @@
 
 > **atanDeg**(`x`): `number`
 
-Defined in: [src/core/utils/trigonometry.ts:167](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/core/utils/trigonometry.ts#L167)
+Defined in: [src/core/utils/trigonometry.ts:167](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/utils/trigonometry.ts#L167)
 
 Arctangent function that returns degrees.
 

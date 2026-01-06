@@ -8,6 +8,6 @@
 
 > **CompassDirection** = *typeof* [`CompassDirection`](../variables/CompassDirection.md)\[keyof *typeof* [`CompassDirection`](../variables/CompassDirection.md)\]
 
-Defined in: [src/qibla/types.ts:72](https://github.com/azkal182/islamic-utils/blob/0df9a3737b1fb38d644e36b5ae34cdf225bc89df/src/qibla/types.ts#L72)
+Defined in: [src/qibla/types.ts:72](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/types.ts#L72)
 
 Compass direction type.

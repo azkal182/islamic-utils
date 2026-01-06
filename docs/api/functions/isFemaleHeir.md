@@ -8,7 +8,7 @@
 
 > **isFemaleHeir**(`type`): `boolean`
 
-Defined in: src/inheritance/types.ts:805
+Defined in: [src/inheritance/types.ts:805](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/types.ts#L805)
 
 Checks if heir type is female.
 
