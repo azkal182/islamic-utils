@@ -1,8 +1,8 @@
-**Islamic Utilities API v0.2.0**
+**Islamic Utilities API v0.2.1**
 
 ***
 
-# Islamic Utilities API v0.2.0
+# Islamic Utilities API v0.2.1
 
 ## Fileoverview
 
@@ -48,6 +48,7 @@ if (result.success) {
 - [CalculationMethod](interfaces/CalculationMethod.md)
 - [CalculatorOptions](interfaces/CalculatorOptions.md)
 - [Coordinates](interfaces/Coordinates.md)
+- [CurrentPrayerInfo](interfaces/CurrentPrayerInfo.md)
 - [DateOnly](interfaces/DateOnly.md)
 - [DateTimeLocal](interfaces/DateTimeLocal.md)
 - [DerivedFlags](interfaces/DerivedFlags.md)
@@ -66,11 +67,13 @@ if (result.success) {
 - [InheritanceResult](interfaces/InheritanceResult.md)
 - [InheritanceSummary](interfaces/InheritanceSummary.md)
 - [InheritanceTraceStep](interfaces/InheritanceTraceStep.md)
+- [LocalTime](interfaces/LocalTime.md)
 - [LocationInput](interfaces/LocationInput.md)
 - [MonthlyPrayerTimesDayResult](interfaces/MonthlyPrayerTimesDayResult.md)
 - [MonthlyPrayerTimesInput](interfaces/MonthlyPrayerTimesInput.md)
 - [MonthlyPrayerTimesMeta](interfaces/MonthlyPrayerTimesMeta.md)
 - [MonthlyPrayerTimesResult](interfaces/MonthlyPrayerTimesResult.md)
+- [NextPrayerInfo](interfaces/NextPrayerInfo.md)
 - [PrayerCalculationParams](interfaces/PrayerCalculationParams.md)
 - [PrayerTimeContext](interfaces/PrayerTimeContext.md)
 - [PrayerTimesMeta](interfaces/PrayerTimesMeta.md)
@@ -182,6 +185,7 @@ if (result.success) {
 - [dateOnlyToJulianDay](functions/dateOnlyToJulianDay.md)
 - [datesEqual](functions/datesEqual.md)
 - [dateToJulianDay](functions/dateToJulianDay.md)
+- [dateToLocalTime](functions/dateToLocalTime.md)
 - [decimalToDms](functions/decimalToDms.md)
 - [destinationPoint](functions/destinationPoint.md)
 - [dmsToDecimal](functions/dmsToDecimal.md)
@@ -189,6 +193,7 @@ if (result.success) {
 - [failure](functions/failure.md)
 - [finalBearing](functions/finalBearing.md)
 - [fixPrecision](functions/fixPrecision.md)
+- [formatMinutesUntil](functions/formatMinutesUntil.md)
 - [formatTime](functions/formatTime.md)
 - [formatUtcOffset](functions/formatUtcOffset.md)
 - [frac](functions/frac.md)
@@ -205,11 +210,14 @@ if (result.success) {
 - [fromFractionalHours](functions/fromFractionalHours.md)
 - [fromJSDate](functions/fromJSDate.md)
 - [getAsrShadowFactor](functions/getAsrShadowFactor.md)
+- [getCurrentPrayer](functions/getCurrentPrayer.md)
 - [getDayOfYear](functions/getDayOfYear.md)
 - [getDaysInMonth](functions/getDaysInMonth.md)
 - [getHeirArabicName](functions/getHeirArabicName.md)
 - [getHeirCategory](functions/getHeirCategory.md)
 - [getMethod](functions/getMethod.md)
+- [getNextPrayer](functions/getNextPrayer.md)
+- [getTimezoneOffset](functions/getTimezoneOffset.md)
 - [getUtcOffset](functions/getUtcOffset.md)
 - [hourAngle](functions/hourAngle.md)
 - [initialBearing](functions/initialBearing.md)
@@ -219,6 +227,7 @@ if (result.success) {
 - [isError](functions/isError.md)
 - [isFemaleHeir](functions/isFemaleHeir.md)
 - [isHighLatitude](functions/isHighLatitude.md)
+- [isIanaTimezone](functions/isIanaTimezone.md)
 - [isLeapYear](functions/isLeapYear.md)
 - [isMaleHeir](functions/isMaleHeir.md)
 - [isSuccess](functions/isSuccess.md)

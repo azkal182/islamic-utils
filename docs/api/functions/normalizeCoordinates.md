@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **normalizeCoordinates**(`coords`): `Required`\<[`Coordinates`](../interfaces/Coordinates.md)\>
 
-Defined in: [src/core/validators/coordinates.ts:187](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/validators/coordinates.ts#L187)
+Defined in: [src/core/validators/coordinates.ts:187](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/validators/coordinates.ts#L187)
 
 Normalizes coordinates to standard ranges.
 

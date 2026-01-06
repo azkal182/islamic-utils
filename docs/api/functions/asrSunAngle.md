@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **asrSunAngle**(`latitude`, `declination`, `shadowFactor`): `number`
 
-Defined in: [src/astronomy/solar.ts:446](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/astronomy/solar.ts#L446)
+Defined in: [src/astronomy/solar.ts:446](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/astronomy/solar.ts#L446)
 
 Calculates shadow length ratio for Asr time calculation.
 

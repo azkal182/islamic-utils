@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MonthlyPrayerTimesResult
 
-Defined in: src/prayer-times/monthly.ts:131
+Defined in: [src/prayer-times/monthly.ts:131](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L131)
 
 Complete result of monthly prayer times calculation.
 
@@ -16,7 +16,7 @@ Complete result of monthly prayer times calculation.
 
 > `readonly` **days**: [`MonthlyPrayerTimesDayResult`](MonthlyPrayerTimesDayResult.md)[]
 
-Defined in: src/prayer-times/monthly.ts:136
+Defined in: [src/prayer-times/monthly.ts:136](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L136)
 
 Array of prayer times for each day of the month.
 Index 0 = Day 1, Index 29 = Day 30, etc.
@@ -27,7 +27,7 @@ Index 0 = Day 1, Index 29 = Day 30, etc.
 
 > `readonly` **meta**: [`MonthlyPrayerTimesMeta`](MonthlyPrayerTimesMeta.md)
 
-Defined in: src/prayer-times/monthly.ts:141
+Defined in: [src/prayer-times/monthly.ts:141](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L141)
 
 Metadata about the calculation.
 
@@ -37,6 +37,6 @@ Metadata about the calculation.
 
 > `readonly` `optional` **trace**: [`TraceStep`](TraceStep.md)[]
 
-Defined in: src/prayer-times/monthly.ts:146
+Defined in: [src/prayer-times/monthly.ts:146](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/monthly.ts#L146)
 
 Optional trace of calculation steps.

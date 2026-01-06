@@ -421,4 +421,101 @@ describe('Prayer Times Integration', () => {
       }
     });
   });
+
+  describe('getNextPrayer Helper', () => {
+    it('should export getNextPrayer function', async () => {
+      const { getNextPrayer } = await import('../../src');
+      expect(getNextPrayer).toBeDefined();
+      expect(typeof getNextPrayer).toBe('function');
+    });
+
+    it('should find next prayer when in middle of day', async () => {
+      const { computePrayerTimes, getNextPrayer, KEMENAG } = await import('../../src');
+
+      const result = computePrayerTimes(
+        { latitude: -6.2088, longitude: 106.8456 },
+        { date: { year: 2024, month: 1, day: 15 }, timezone: 7 },
+        { method: KEMENAG }
+      );
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        // Simulate 14:00 local time (before Asr)
+        const simulatedTime = new Date(Date.UTC(2024, 0, 15, 7, 0)); // 7 UTC = 14 WIB
+        const next = getNextPrayer(simulatedTime, result.data, 7);
+
+        expect(next).toBeDefined();
+        expect(next.name).toBeDefined();
+        expect(next.time).toBeDefined();
+        expect(next.minutesUntil).toBeGreaterThanOrEqual(0);
+        expect(typeof next.isNextDay).toBe('boolean');
+      }
+    });
+
+    it('should wrap to next day after Isha', async () => {
+      const { computePrayerTimes, getNextPrayer, KEMENAG } = await import('../../src');
+
+      const result = computePrayerTimes(
+        { latitude: -6.2088, longitude: 106.8456 },
+        { date: { year: 2024, month: 1, day: 15 }, timezone: 7 },
+        { method: KEMENAG }
+      );
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        // Simulate 23:00 local time (after Isha)
+        const simulatedTime = new Date(Date.UTC(2024, 0, 15, 16, 0)); // 16 UTC = 23 WIB
+        const next = getNextPrayer(simulatedTime, result.data, 7);
+
+        expect(next.isNextDay).toBe(true);
+        expect(next.minutesUntil).toBeGreaterThan(0);
+      }
+    });
+
+    it('should work with IANA timezone string', async () => {
+      const { computePrayerTimes, getNextPrayer, KEMENAG } = await import('../../src');
+
+      const result = computePrayerTimes(
+        { latitude: -6.2088, longitude: 106.8456 },
+        { date: { year: 2024, month: 1, day: 15 }, timezone: 'Asia/Jakarta' },
+        { method: KEMENAG }
+      );
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const next = getNextPrayer(new Date(), result.data, 'Asia/Jakarta');
+        expect(next).toBeDefined();
+        expect(next.name).toBeDefined();
+      }
+    });
+
+    it('should export formatMinutesUntil utility', async () => {
+      const { formatMinutesUntil } = await import('../../src');
+
+      expect(formatMinutesUntil(45)).toBe('45m');
+      expect(formatMinutesUntil(60)).toBe('1h');
+      expect(formatMinutesUntil(90)).toBe('1h 30m');
+      expect(formatMinutesUntil(150)).toBe('2h 30m');
+    });
+
+    it('should export getCurrentPrayer function', async () => {
+      const { computePrayerTimes, getCurrentPrayer, KEMENAG } = await import('../../src');
+
+      const result = computePrayerTimes(
+        { latitude: -6.2088, longitude: 106.8456 },
+        { date: { year: 2024, month: 1, day: 15 }, timezone: 7 },
+        { method: KEMENAG }
+      );
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        // Simulate 14:00 local time (Dhuhr period)
+        const simulatedTime = new Date(Date.UTC(2024, 0, 15, 7, 0)); // 7 UTC = 14 WIB
+        const current = getCurrentPrayer(simulatedTime, result.data, 7);
+
+        expect(current).toBeDefined();
+        expect(current.current).toBeDefined();
+      }
+    });
+  });
 });

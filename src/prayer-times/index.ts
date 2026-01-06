@@ -105,3 +105,7 @@ export { applyAdjustments, applySafetyBuffer, applyRounding } from './adjustment
 
 // Validation
 export { validateTimeSequence, validatePrayerTimes } from './validation';
+
+// Next prayer utilities
+export { getNextPrayer, getCurrentPrayer, formatMinutesUntil } from './next-prayer';
+export type { NextPrayerInfo, CurrentPrayerInfo } from './next-prayer';

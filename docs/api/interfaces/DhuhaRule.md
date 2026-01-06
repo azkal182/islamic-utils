@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: DhuhaRule
 
-Defined in: [src/prayer-times/types.ts:250](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L250)
+Defined in: [src/prayer-times/types.ts:250](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L250)
 
 Rule for calculating Dhuha prayer time window.
 
@@ -21,7 +21,7 @@ and before the sun reaches its zenith (solar noon).
 
 > `readonly` **end**: `object`
 
-Defined in: [src/prayer-times/types.ts:273](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L273)
+Defined in: [src/prayer-times/types.ts:273](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L273)
 
 Rule for calculating Dhuha end time.
 
@@ -45,7 +45,7 @@ Default: 0 (Dhuha ends exactly at solar noon)
 
 > `readonly` **start**: `object`
 
-Defined in: [src/prayer-times/types.ts:254](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L254)
+Defined in: [src/prayer-times/types.ts:254](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L254)
 
 Rule for calculating Dhuha start time.
 

@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **isHighLatitude**(`coords`, `threshold`): `boolean`
 
-Defined in: [src/core/validators/coordinates.ts:160](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/validators/coordinates.ts#L160)
+Defined in: [src/core/validators/coordinates.ts:160](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/validators/coordinates.ts#L160)
 
 Checks if coordinates are in a high-latitude region.
 

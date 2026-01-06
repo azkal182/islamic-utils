@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **dateToJulianDay**(`year`, `month`, `day`): `number`
 
-Defined in: [src/astronomy/solar.ts:42](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/astronomy/solar.ts#L42)
+Defined in: [src/astronomy/solar.ts:42](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/astronomy/solar.ts#L42)
 
 Calculates the Julian Day Number for a given date.
 

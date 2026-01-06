@@ -260,6 +260,14 @@ export {
 
 export type { CalculationMethodKey } from './prayer-times';
 
+// Next prayer utilities
+export { getNextPrayer, getCurrentPrayer, formatMinutesUntil } from './prayer-times';
+export type { NextPrayerInfo, CurrentPrayerInfo } from './prayer-times';
+
+// Timezone utilities
+export { dateToLocalTime, getTimezoneOffset, isIanaTimezone } from './core/utils';
+export type { LocalTime } from './core/utils';
+
 // ═══════════════════════════════════════════════════════════════════════════
 // Qibla Direction Module
 // ═══════════════════════════════════════════════════════════════════════════

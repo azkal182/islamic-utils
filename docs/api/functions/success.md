@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **success**\<`T`\>(`data`, `trace?`): [`SuccessResult`](../interfaces/SuccessResult.md)\<`T`\>
 
-Defined in: [src/core/types/result.ts:173](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L173)
+Defined in: [src/core/types/result.ts:173](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L173)
 
 Creates a successful result.
 

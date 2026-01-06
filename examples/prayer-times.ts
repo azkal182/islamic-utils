@@ -223,3 +223,45 @@ if (monthlyResult.success) {
 console.log('\n' + '='.repeat(60));
 console.log('Done!');
 console.log('='.repeat(60));
+
+// ═══════════════════════════════════════════════════════════════════════════
+// Example 8: Next Prayer Time
+// ═══════════════════════════════════════════════════════════════════════════
+
+import { getNextPrayer, getCurrentPrayer, formatMinutesUntil } from '../src';
+
+console.log('\n' + '='.repeat(60));
+console.log('Example 8: Next Prayer Time');
+console.log('='.repeat(60));
+
+// First, get today's prayer times
+const todayResult = computePrayerTimes(
+  { latitude: -6.2088, longitude: 106.8456 },
+  { date: { year: 2026, month: 1, day: 6 }, timezone: 'Asia/Jakarta' },
+  { method: CALCULATION_METHODS.KEMENAG }
+);
+
+if (todayResult.success) {
+  // Get next prayer based on current time
+  const now = new Date();
+  const next = getNextPrayer(now, todayResult.data, 'Asia/Jakarta');
+  const current = getCurrentPrayer(now, todayResult.data, 'Asia/Jakarta');
+
+  console.log(`\nCurrent time: ${now.toLocaleTimeString('id-ID', { timeZone: 'Asia/Jakarta' })}`);
+
+  if (current.current) {
+    console.log(`Current period: ${current.current.toUpperCase()}`);
+  }
+
+  console.log(`\nNext prayer: ${next.name.toUpperCase()}`);
+  console.log(`  Time: ${next.time}`);
+  console.log(`  In: ${formatMinutesUntil(next.minutesUntil)}`);
+
+  if (next.isNextDay) {
+    console.log('  (Tomorrow)');
+  }
+}
+
+console.log('\n' + '='.repeat(60));
+console.log('All Examples Complete!');
+console.log('='.repeat(60));

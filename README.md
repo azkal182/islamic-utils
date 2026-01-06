@@ -225,6 +225,77 @@ interface MonthlyPrayerTimesResult {
 }
 ```
 
+### Next Prayer Time
+
+Determine the next upcoming prayer based on current time:
+
+```typescript
+import {
+  computePrayerTimes,
+  getNextPrayer,
+  getCurrentPrayer,
+  formatMinutesUntil,
+  CALCULATION_METHODS
+} from '@azkal182/islamic-utils';
+
+// First, get today's prayer times
+const result = computePrayerTimes(
+  { latitude: -6.2088, longitude: 106.8456 },
+  { date: { year: 2024, month: 1, day: 15 }, timezone: 'Asia/Jakarta' },
+  { method: CALCULATION_METHODS.KEMENAG }
+);
+
+if (result.success) {
+  // Find next prayer based on current time
+  const next = getNextPrayer(new Date(), result.data, 'Asia/Jakarta');
+
+  console.log(`Next: ${next.name}`);                    // "maghrib"
+  console.log(`Time: ${next.time}`);                    // "18:07"
+  console.log(`In: ${formatMinutesUntil(next.minutesUntil)}`);  // "1h 30m"
+
+  if (next.isNextDay) {
+    console.log('(Tomorrow)');
+  }
+
+  // Get current prayer period
+  const current = getCurrentPrayer(new Date(), result.data, 'Asia/Jakarta');
+  console.log(`Current period: ${current.current}`);    // "asr"
+}
+```
+
+**Return Types:**
+
+```typescript
+interface NextPrayerInfo {
+  name: PrayerName;      // "maghrib"
+  time: string;          // "18:07"
+  timeNumeric: number;   // 18.12 (fractional hours)
+  minutesUntil: number;  // 90
+  isNextDay: boolean;    // true if past Isha
+}
+
+interface CurrentPrayerInfo {
+  current: PrayerName | null;  // Current prayer period
+  previous: PrayerName | null; // Previous prayer
+}
+```
+
+### Timezone Support
+
+All functions support both **IANA timezone names** and **UTC offsets**:
+
+```typescript
+// IANA timezone (recommended) - handles DST automatically
+timezone: 'Asia/Jakarta'
+timezone: 'America/New_York'
+timezone: 'Europe/London'
+
+// UTC offset (simple)
+timezone: 7     // UTC+7
+timezone: -5    // UTC-5
+timezone: 5.5   // UTC+5:30 (India)
+```
+
 ---
 
 

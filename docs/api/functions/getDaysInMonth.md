@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **getDaysInMonth**(`year`, `month`): `number`
 
-Defined in: [src/core/validators/date.ts:70](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/validators/date.ts#L70)
+Defined in: [src/core/validators/date.ts:70](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/validators/date.ts#L70)
 
 Gets the number of days in a given month.
 

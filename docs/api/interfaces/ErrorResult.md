@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ErrorResult
 
-Defined in: [src/core/types/result.ts:114](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L114)
+Defined in: [src/core/types/result.ts:114](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L114)
 
 Failed result with error information.
 
@@ -16,7 +16,7 @@ Failed result with error information.
 
 > `readonly` **error**: [`LibraryError`](../classes/LibraryError.md)
 
-Defined in: [src/core/types/result.ts:123](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L123)
+Defined in: [src/core/types/result.ts:123](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L123)
 
 Structured error information.
 
@@ -26,7 +26,7 @@ Structured error information.
 
 > `readonly` **success**: `false`
 
-Defined in: [src/core/types/result.ts:118](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L118)
+Defined in: [src/core/types/result.ts:118](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L118)
 
 Indicates this is an error result.
 
@@ -36,7 +36,7 @@ Indicates this is an error result.
 
 > `readonly` `optional` **trace**: [`TraceStep`](TraceStep.md)[]
 
-Defined in: [src/core/types/result.ts:131](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/core/types/result.ts#L131)
+Defined in: [src/core/types/result.ts:131](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/core/types/result.ts#L131)
 
 Optional partial trace up to the point of failure.
 

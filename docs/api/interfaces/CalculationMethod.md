@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CalculationMethod
 
-Defined in: [src/prayer-times/types.ts:314](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L314)
+Defined in: [src/prayer-times/types.ts:314](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L314)
 
 A calculation method defines the angles/intervals used for Fajr and Isha.
 
@@ -22,7 +22,7 @@ specifying these conventions.
 
 > `readonly` `optional` **description**: `string`
 
-Defined in: [src/prayer-times/types.ts:363](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L363)
+Defined in: [src/prayer-times/types.ts:363](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L363)
 
 Optional description of the method.
 
@@ -32,7 +32,7 @@ Optional description of the method.
 
 > `readonly` **fajrAngle**: `number`
 
-Defined in: [src/prayer-times/types.ts:327](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L327)
+Defined in: [src/prayer-times/types.ts:327](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L327)
 
 Angle below horizon for Fajr.
 
@@ -47,7 +47,7 @@ Values typically range from 15° to 20°.
 
 > `readonly` `optional` **ishaAngle**: `number`
 
-Defined in: [src/prayer-times/types.ts:338](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L338)
+Defined in: [src/prayer-times/types.ts:338](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L338)
 
 Angle below horizon for Isha.
 
@@ -64,7 +64,7 @@ If undefined, `ishaIntervalMinutes` must be specified.
 
 > `readonly` `optional` **ishaIntervalMinutes**: `number`
 
-Defined in: [src/prayer-times/types.ts:349](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L349)
+Defined in: [src/prayer-times/types.ts:349](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L349)
 
 Fixed interval in minutes after Maghrib for Isha.
 
@@ -81,7 +81,7 @@ If specified, takes precedence over `ishaAngle`.
 
 > `readonly` `optional` **maghribAngle**: `number`
 
-Defined in: [src/prayer-times/types.ts:358](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L358)
+Defined in: [src/prayer-times/types.ts:358](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L358)
 
 Optional custom Maghrib angle.
 
@@ -96,7 +96,7 @@ slightly different angle. If undefined, uses default (-0.833°).
 
 > `readonly` **name**: `string`
 
-Defined in: [src/prayer-times/types.ts:318](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L318)
+Defined in: [src/prayer-times/types.ts:318](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L318)
 
 Display name of the method.
 
@@ -106,6 +106,6 @@ Display name of the method.
 
 > `readonly` `optional` **regions**: readonly `string`[]
 
-Defined in: [src/prayer-times/types.ts:368](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L368)
+Defined in: [src/prayer-times/types.ts:368](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L368)
 
 Regions where this method is commonly used.

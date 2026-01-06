@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **calculateInitialBearing**(`from`, `to`): `number`
 
-Defined in: [src/qibla/great-circle.ts:49](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/qibla/great-circle.ts#L49)
+Defined in: [src/qibla/great-circle.ts:49](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/qibla/great-circle.ts#L49)
 
 Calculates the initial bearing (forward azimuth) from one point to another.
 

@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: PrayerTimesMeta
 
-Defined in: [src/prayer-times/types.ts:493](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L493)
+Defined in: [src/prayer-times/types.ts:493](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L493)
 
 Metadata about the calculation.
 
@@ -16,7 +16,7 @@ Metadata about the calculation.
 
 > `readonly` `optional` **adjustedPrayers**: [`PrayerName`](../type-aliases/PrayerName.md)[]
 
-Defined in: [src/prayer-times/types.ts:527](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L527)
+Defined in: [src/prayer-times/types.ts:527](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L527)
 
 Which prayer times needed high latitude adjustment.
 
@@ -26,7 +26,7 @@ Which prayer times needed high latitude adjustment.
 
 > `readonly` **coordinates**: [`Coordinates`](Coordinates.md)
 
-Defined in: [src/prayer-times/types.ts:497](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L497)
+Defined in: [src/prayer-times/types.ts:497](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L497)
 
 The coordinates used for calculation.
 
@@ -36,7 +36,7 @@ The coordinates used for calculation.
 
 > `readonly` **date**: [`DateOnly`](DateOnly.md)
 
-Defined in: [src/prayer-times/types.ts:502](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L502)
+Defined in: [src/prayer-times/types.ts:502](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L502)
 
 The date for which times were calculated.
 
@@ -46,7 +46,7 @@ The date for which times were calculated.
 
 > `readonly` **highLatitudeAdjusted**: `boolean`
 
-Defined in: [src/prayer-times/types.ts:522](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L522)
+Defined in: [src/prayer-times/types.ts:522](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L522)
 
 Whether high latitude rules were applied.
 
@@ -56,7 +56,7 @@ Whether high latitude rules were applied.
 
 > `readonly` **method**: [`CalculationMethod`](CalculationMethod.md)
 
-Defined in: [src/prayer-times/types.ts:512](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L512)
+Defined in: [src/prayer-times/types.ts:512](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L512)
 
 The calculation method used.
 
@@ -66,7 +66,7 @@ The calculation method used.
 
 > `readonly` **params**: `Required`\<[`PrayerCalculationParams`](PrayerCalculationParams.md)\>
 
-Defined in: [src/prayer-times/types.ts:517](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L517)
+Defined in: [src/prayer-times/types.ts:517](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L517)
 
 Full parameters used (including defaults).
 
@@ -76,6 +76,6 @@ Full parameters used (including defaults).
 
 > `readonly` **timezone**: [`Timezone`](../type-aliases/Timezone.md)
 
-Defined in: [src/prayer-times/types.ts:507](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/types.ts#L507)
+Defined in: [src/prayer-times/types.ts:507](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/types.ts#L507)
 
 The timezone used for calculation.

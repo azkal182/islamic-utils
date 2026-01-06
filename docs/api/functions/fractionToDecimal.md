@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **fractionToDecimal**(`f`): `number`
 
-Defined in: [src/inheritance/utils/fraction.ts:295](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/inheritance/utils/fraction.ts#L295)
+Defined in: [src/inheritance/utils/fraction.ts:295](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/inheritance/utils/fraction.ts#L295)
 
 Converts a fraction to decimal.
 

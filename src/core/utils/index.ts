@@ -38,3 +38,7 @@ export {
   safeAcosDeg,
   safeAsinDeg,
 } from './trigonometry';
+
+// Timezone utilities
+export { dateToLocalTime, getTimezoneOffset, isIanaTimezone } from './timezone';
+export type { LocalTime } from './timezone';

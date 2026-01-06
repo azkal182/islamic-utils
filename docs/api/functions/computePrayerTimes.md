@@ -1,4 +1,4 @@
-[**Islamic Utilities API v0.2.0**](../README.md)
+[**Islamic Utilities API v0.2.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **computePrayerTimes**(`location`, `timeContext`, `params`, `options`): [`Result`](../type-aliases/Result.md)\<[`PrayerTimesResult`](../interfaces/PrayerTimesResult.md)\>
 
-Defined in: [src/prayer-times/calculator.ts:167](https://github.com/azkal182/islamic-utils/blob/ddd04bee89289da73cadadfcee51cdeac187e097/src/prayer-times/calculator.ts#L167)
+Defined in: [src/prayer-times/calculator.ts:167](https://github.com/azkal182/islamic-utils/blob/6511551c69fa725f6e44569e9e1278849e32f702/src/prayer-times/calculator.ts#L167)
 
 Computes all prayer times for a given location, date, and parameters.
 
