@@ -89,17 +89,64 @@ if (result.success) {
 ### Hijri Calendar
 
 ```typescript
-import { computeHijriDate } from '@azkal182/islamic-utils/hijri-calendar';
+import {
+  computeHijriDate,
+  computeHijriMonth,
+  computeHijriRange,
+  formatHijriDateLong,
+} from '@azkal182/islamic-utils/hijri-calendar';
 
-const result = computeHijriDate(
-  { date: { year: 2025, month: 3, day: 15 } },
+// 1) Convert a single Gregorian date
+const dateResult = computeHijriDate(
+  { date: { year: 2026, month: 1, day: 12 } },
   { method: 'ummul_qura' }
 );
 
-if (result.success) {
-  console.log(result.data.hijri);
+if (dateResult.success) {
+  console.log('Hijri:', formatHijriDateLong(dateResult.data.hijri));
 }
+
+// 2) Choose method (NU Falakiyah)
+const nuResult = computeHijriDate(
+  { date: { year: 2026, month: 1, day: 12 } },
+  { method: 'nu_falakiyah' }
+);
+
+// 3) Generate a Hijri month calendar
+const monthResult = computeHijriMonth({ hijri: { year: 1447, month: 7 } }, { method: 'ummul_qura' });
+
+// 4) Convert a Gregorian date range
+const rangeResult = computeHijriRange(
+  {
+    start: { year: 2026, month: 1, day: 1 },
+    end: { year: 2026, month: 1, day: 7 },
+  },
+  { method: 'ummul_qura' }
+);
+
+// 5) Apply adjustments (memory mode)
+const adjusted = computeHijriDate(
+  { date: { year: 2025, month: 3, day: 15 } },
+  {
+    method: 'ummul_qura',
+    adjustments: {
+      mode: 'memory',
+      data: [
+        {
+          method: 'ummul_qura',
+          hijriYear: 1446,
+          hijriMonth: 9,
+          shiftDays: 1,
+          source: 'sidang-isbat',
+          revision: 1,
+        },
+      ],
+    },
+  }
+);
 ```
+
+Docs: `docs/hijri-calendar/README.md`
 
 ---
 
@@ -612,6 +659,8 @@ const data = unwrapOr(result, fallback);  // Returns fallback on error
 | Qibla | Single calculation | ~500,000+ ops/sec |
 | Inheritance | Simple case | ~50,000+ ops/sec |
 | Inheritance | Complex case | ~25,000+ ops/sec |
+| Hijri Calendar | computeHijriDate (ummul_qura) | ~850,000+ ops/sec |
+| Hijri Calendar | computeHijriDate (nu_falakiyah) | ~10,000+ ops/sec |
 
 ---
 
@@ -638,6 +687,10 @@ const data = unwrapOr(result, fallback);  // Returns fallback on error
 - TypeDoc API documentation
 - Performance benchmarks
 
+### ✅ Completed (v0.3.0)
+
+- Hijri Calendar (Gregorian ↔ Hijri conversion, month/range, methods, adjustments)
+
 ### 🔜 Planned Features
 
 | Feature | Description | Priority |
@@ -645,7 +698,6 @@ const data = unwrapOr(result, fallback);  // Returns fallback on error
 | **Gono Gini** | Marital property (harta bersama) calculation before inheritance | High |
 | **Dhawil Arham** | Complete distant relative distribution | Medium |
 | **Grandfather Competition** | Full grandfather with siblings calculation | Medium |
-| **Hijri Calendar** | Hijri date conversion and calculation | Medium |
 | **Zakat Calculator** | Zakat calculation for various assets | Low |
 | **Fasting Calendar** | Ramadan and voluntary fasting calculator | Low |
 
@@ -678,12 +730,19 @@ See [examples/](./examples/) for complete usage examples:
 - [prayer-times.ts](./examples/prayer-times.ts) - Prayer Times features
 - [qibla.ts](./examples/qibla.ts) - Qibla Direction features
 - [inheritance.ts](./examples/inheritance.ts) - Inheritance (Faraidh) features
+- [hijri-calendar.ts](./examples/hijri-calendar.ts) - Hijri Calendar (date/month/range/methods/adjustments)
 
 Run examples:
 ```bash
+npm run example:prayer-times
+npm run example:qibla
+npm run example:inheritance
+npm run example:hijri-calendar
+
 pnpm run example:prayer-times
 pnpm run example:qibla
 pnpm run example:inheritance
+pnpm run example:hijri-calendar
 ```
 
 ---
@@ -693,6 +752,8 @@ pnpm run example:inheritance
 Full API documentation generated with TypeDoc:
 
 ```bash
+npm run docs
+
 pnpm run docs
 ```
 
@@ -703,6 +764,11 @@ Documentation is generated at `docs/api/`.
 ## 🧪 Testing
 
 ```bash
+npm run test           # Run tests in watch mode
+npm run test:run       # Run tests once
+npm run test:coverage  # Run with coverage
+npm run bench          # Run benchmarks
+
 pnpm test           # Run tests in watch mode
 pnpm test:run       # Run tests once
 pnpm test:coverage  # Run with coverage

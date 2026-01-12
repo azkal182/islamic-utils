@@ -36,6 +36,7 @@
     "example:prayer-times": "tsx examples/prayer-times.ts",
     "example:qibla": "tsx examples/qibla.ts",
     "example:inheritance": "tsx examples/inheritance.ts",
+    "example:hijri-calendar": "tsx examples/hijri-calendar.ts",
     "bench": "vitest bench",
     "docs": "typedoc",
     "prepublishOnly": "pnpm run build"
