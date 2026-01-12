@@ -8,7 +8,7 @@
 
 > **normalizeAngle**(`degrees`): `number`
 
-Defined in: [src/core/types/angle.ts:167](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/angle.ts#L167)
+Defined in: [src/core/types/angle.ts:167](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/angle.ts#L167)
 
 Normalizes an angle to be within the range [0, 360).
 

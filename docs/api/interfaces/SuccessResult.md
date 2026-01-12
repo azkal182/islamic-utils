@@ -6,7 +6,7 @@
 
 # Interface: SuccessResult\<T\>
 
-Defined in: [src/core/types/result.ts:91](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L91)
+Defined in: [src/core/types/result.ts:91](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/result.ts#L91)
 
 Successful result with data.
 
@@ -24,7 +24,7 @@ The type of the successful data
 
 > `readonly` **data**: `T`
 
-Defined in: [src/core/types/result.ts:100](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L100)
+Defined in: [src/core/types/result.ts:100](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/result.ts#L100)
 
 The actual result data.
 
@@ -34,7 +34,7 @@ The actual result data.
 
 > `readonly` **success**: `true`
 
-Defined in: [src/core/types/result.ts:95](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L95)
+Defined in: [src/core/types/result.ts:95](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/result.ts#L95)
 
 Indicates this is a successful result.
 
@@ -44,7 +44,7 @@ Indicates this is a successful result.
 
 > `readonly` `optional` **trace**: [`TraceStep`](TraceStep.md)[]
 
-Defined in: [src/core/types/result.ts:108](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L108)
+Defined in: [src/core/types/result.ts:108](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/result.ts#L108)
 
 Optional trace of calculation steps.
 

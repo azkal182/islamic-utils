@@ -8,7 +8,7 @@
 
 > **isAtKaaba**(`coords`): `boolean`
 
-Defined in: [src/core/constants/kaaba.ts:133](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/constants/kaaba.ts#L133)
+Defined in: [src/core/constants/kaaba.ts:133](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/constants/kaaba.ts#L133)
 
 Checks if a location is at or very near the Ka'bah.
 

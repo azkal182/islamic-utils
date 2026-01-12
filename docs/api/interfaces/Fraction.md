@@ -6,7 +6,7 @@
 
 # Interface: Fraction
 
-Defined in: [src/inheritance/utils/fraction.ts:22](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/utils/fraction.ts#L22)
+Defined in: [src/inheritance/utils/fraction.ts:22](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/inheritance/utils/fraction.ts#L22)
 
 Represents a fraction with numerator and denominator.
 
@@ -23,7 +23,7 @@ const third: Fraction = { numerator: 1, denominator: 3 };
 
 > `readonly` **denominator**: `number`
 
-Defined in: [src/inheritance/utils/fraction.ts:24](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/utils/fraction.ts#L24)
+Defined in: [src/inheritance/utils/fraction.ts:24](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/inheritance/utils/fraction.ts#L24)
 
 ***
 
@@ -31,4 +31,4 @@ Defined in: [src/inheritance/utils/fraction.ts:24](https://github.com/azkal182/i
 
 > `readonly` **numerator**: `number`
 
-Defined in: [src/inheritance/utils/fraction.ts:23](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/utils/fraction.ts#L23)
+Defined in: [src/inheritance/utils/fraction.ts:23](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/inheritance/utils/fraction.ts#L23)

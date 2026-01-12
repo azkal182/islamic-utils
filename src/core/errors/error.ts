@@ -196,6 +196,42 @@ export const Errors = {
     createError(ErrorCodes.INVALID_TIMEZONE, message, details),
 
   /**
+   * Creates an INVALID_PARAMETER_TYPE error.
+   *
+   * @param message - Error message
+   * @param details - Additional details about the invalid parameter
+   */
+  invalidParameterType: (message: string, details?: Record<string, unknown>): LibraryError =>
+    createError(ErrorCodes.INVALID_PARAMETER_TYPE, message, details),
+
+  /**
+   * Creates an OUT_OF_SUPPORTED_RANGE error.
+   *
+   * @param message - Error message
+   * @param details - Details about the supported range
+   */
+  outOfSupportedRange: (message: string, details?: Record<string, unknown>): LibraryError =>
+    createError(ErrorCodes.OUT_OF_SUPPORTED_RANGE, message, details),
+
+  /**
+   * Creates an INVALID_ADJUSTMENT error.
+   *
+   * @param message - Error message
+   * @param details - Adjustment details
+   */
+  invalidAdjustment: (message: string, details?: Record<string, unknown>): LibraryError =>
+    createError(ErrorCodes.INVALID_ADJUSTMENT, message, details),
+
+  /**
+   * Creates a METHOD_NOT_SUPPORTED error.
+   *
+   * @param message - Error message
+   * @param details - Method details
+   */
+  methodNotSupported: (message: string, details?: Record<string, unknown>): LibraryError =>
+    createError(ErrorCodes.METHOD_NOT_SUPPORTED, message, details),
+
+  /**
    * Creates a POLAR_DAY_UNRESOLVED error.
    *
    * @param latitude - The problematic latitude

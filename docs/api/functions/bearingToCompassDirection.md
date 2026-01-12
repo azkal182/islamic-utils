@@ -8,7 +8,7 @@
 
 > **bearingToCompassDirection**(`bearing`): [`CompassDirection`](../type-aliases/CompassDirection.md)
 
-Defined in: [src/qibla/types.ts:102](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/qibla/types.ts#L102)
+Defined in: [src/qibla/types.ts:102](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/qibla/types.ts#L102)
 
 Converts a bearing to a compass direction.
 

@@ -6,7 +6,7 @@
 
 # Interface: NextPrayerInfo
 
-Defined in: [src/prayer-times/next-prayer.ts:30](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L30)
+Defined in: [src/prayer-times/next-prayer.ts:30](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L30)
 
 Information about the next upcoming prayer.
 
@@ -16,7 +16,7 @@ Information about the next upcoming prayer.
 
 > `readonly` **isNextDay**: `boolean`
 
-Defined in: [src/prayer-times/next-prayer.ts:61](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L61)
+Defined in: [src/prayer-times/next-prayer.ts:61](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L61)
 
 Whether the next prayer is on the following day.
 
@@ -30,7 +30,7 @@ True if we've passed Isha and the next prayer is tomorrow's Imsak/Fajr.
 
 > `readonly` **minutesUntil**: `number`
 
-Defined in: [src/prayer-times/next-prayer.ts:53](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L53)
+Defined in: [src/prayer-times/next-prayer.ts:53](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L53)
 
 Minutes until the next prayer.
 
@@ -45,7 +45,7 @@ the remaining minutes of today plus the time into tomorrow.
 
 > `readonly` **name**: [`PrayerName`](../type-aliases/PrayerName.md)
 
-Defined in: [src/prayer-times/next-prayer.ts:34](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L34)
+Defined in: [src/prayer-times/next-prayer.ts:34](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L34)
 
 Name of the next prayer.
 
@@ -55,7 +55,7 @@ Name of the next prayer.
 
 > `readonly` **prayerTimes**: [`PrayerTimesResult`](PrayerTimesResult.md)
 
-Defined in: [src/prayer-times/next-prayer.ts:69](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L69)
+Defined in: [src/prayer-times/next-prayer.ts:69](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L69)
 
 Prayer times for the current day.
 
@@ -69,7 +69,7 @@ Included for convenience if you want to display all times.
 
 > `readonly` **time**: `string`
 
-Defined in: [src/prayer-times/next-prayer.ts:39](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L39)
+Defined in: [src/prayer-times/next-prayer.ts:39](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L39)
 
 Formatted time string (HH:MM).
 
@@ -79,6 +79,6 @@ Formatted time string (HH:MM).
 
 > `readonly` **timeNumeric**: `number`
 
-Defined in: [src/prayer-times/next-prayer.ts:44](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L44)
+Defined in: [src/prayer-times/next-prayer.ts:44](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L44)
 
 Time as fractional hours (for calculations).

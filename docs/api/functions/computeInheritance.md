@@ -8,7 +8,7 @@
 
 > **computeInheritance**(`input`, `_options?`): [`Result`](../type-aliases/Result.md)\<[`InheritanceResult`](../interfaces/InheritanceResult.md)\>
 
-Defined in: [src/inheritance/calculator.ts:83](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/inheritance/calculator.ts#L83)
+Defined in: [src/inheritance/calculator.ts:83](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/inheritance/calculator.ts#L83)
 
 Computes Islamic inheritance distribution.
 

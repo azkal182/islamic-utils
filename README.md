@@ -13,6 +13,7 @@
 | 🕌 **Prayer Times** | ✅ Complete | 9 prayer times with 13+ calculation methods |
 | 🧭 **Qibla Direction** | ✅ Complete | Bearing and distance to Ka'bah |
 | 📜 **Inheritance (Faraidh)** | ✅ Complete | 30+ heir types, hijab, aul, radd, special cases |
+| 🗓️ **Hijri Calendar** | ✅ Complete | Gregorian ↔ Hijri conversion, monthly calendar, adjustments |
 
 ## 📦 Installation
 
@@ -82,6 +83,21 @@ if (result.success) {
   for (const share of result.data.shares) {
     console.log(`${share.heirType}: ${share.totalValue}`);
   }
+}
+```
+
+### Hijri Calendar
+
+```typescript
+import { computeHijriDate } from '@azkal182/islamic-utils/hijri-calendar';
+
+const result = computeHijriDate(
+  { date: { year: 2025, month: 3, day: 15 } },
+  { method: 'ummul_qura' }
+);
+
+if (result.success) {
+  console.log(result.data.hijri);
 }
 ```
 

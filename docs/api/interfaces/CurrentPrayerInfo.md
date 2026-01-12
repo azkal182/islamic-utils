@@ -6,7 +6,7 @@
 
 # Interface: CurrentPrayerInfo
 
-Defined in: [src/prayer-times/next-prayer.ts:75](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L75)
+Defined in: [src/prayer-times/next-prayer.ts:75](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L75)
 
 Information about the current prayer period.
 
@@ -16,7 +16,7 @@ Information about the current prayer period.
 
 > `readonly` **current**: [`PrayerName`](../type-aliases/PrayerName.md) \| `null`
 
-Defined in: [src/prayer-times/next-prayer.ts:83](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L83)
+Defined in: [src/prayer-times/next-prayer.ts:83](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L83)
 
 Current prayer period.
 
@@ -31,7 +31,7 @@ null if before Fajr (or if times are invalid).
 
 > `readonly` **prayerTimes**: [`PrayerTimesResult`](PrayerTimesResult.md)
 
-Defined in: [src/prayer-times/next-prayer.ts:93](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L93)
+Defined in: [src/prayer-times/next-prayer.ts:93](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L93)
 
 Prayer times for the current day.
 
@@ -41,6 +41,6 @@ Prayer times for the current day.
 
 > `readonly` **previous**: [`PrayerName`](../type-aliases/PrayerName.md) \| `null`
 
-Defined in: [src/prayer-times/next-prayer.ts:88](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L88)
+Defined in: [src/prayer-times/next-prayer.ts:88](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L88)
 
 Previous prayer (the one before current).

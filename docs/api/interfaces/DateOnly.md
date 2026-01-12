@@ -6,7 +6,7 @@
 
 # Interface: DateOnly
 
-Defined in: [src/core/types/date.ts:57](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/date.ts#L57)
+Defined in: [src/core/types/date.ts:57](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/date.ts#L57)
 
 Represents a calendar date without time information.
 
@@ -46,7 +46,7 @@ const ramadanStart: DateOnly = {
 
 > `readonly` **day**: `number`
 
-Defined in: [src/core/types/date.ts:90](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/date.ts#L90)
+Defined in: [src/core/types/date.ts:90](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/date.ts#L90)
 
 Day of the month (1-indexed).
 
@@ -63,7 +63,7 @@ Valid range depends on the month:
 
 > `readonly` **month**: `number`
 
-Defined in: [src/core/types/date.ts:79](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/date.ts#L79)
+Defined in: [src/core/types/date.ts:79](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/date.ts#L79)
 
 Month of the year (1-indexed).
 
@@ -81,7 +81,7 @@ Valid range: 1 to 12
 
 > `readonly` **year**: `number`
 
-Defined in: [src/core/types/date.ts:67](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/date.ts#L67)
+Defined in: [src/core/types/date.ts:67](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/date.ts#L67)
 
 Full year (4 digits).
 

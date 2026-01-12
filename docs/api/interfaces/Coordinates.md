@@ -6,7 +6,7 @@
 
 # Interface: Coordinates
 
-Defined in: [src/core/types/coordinates.ts:46](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/coordinates.ts#L46)
+Defined in: [src/core/types/coordinates.ts:46](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/coordinates.ts#L46)
 
 Represents geographic coordinates on Earth.
 
@@ -40,7 +40,7 @@ const london: Coordinates = {
 
 > `readonly` `optional` **altitude**: `number`
 
-Defined in: [src/core/types/coordinates.ts:85](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/coordinates.ts#L85)
+Defined in: [src/core/types/coordinates.ts:85](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/coordinates.ts#L85)
 
 Altitude above sea level in meters.
 
@@ -63,7 +63,7 @@ Altitude can affect prayer time calculations due to:
 
 > `readonly` **latitude**: `number`
 
-Defined in: [src/core/types/coordinates.ts:60](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/coordinates.ts#L60)
+Defined in: [src/core/types/coordinates.ts:60](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/coordinates.ts#L60)
 
 Latitude in decimal degrees.
 
@@ -84,7 +84,7 @@ Common reference points:
 
 > `readonly` **longitude**: `number`
 
-Defined in: [src/core/types/coordinates.ts:72](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/coordinates.ts#L72)
+Defined in: [src/core/types/coordinates.ts:72](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/coordinates.ts#L72)
 
 Longitude in decimal degrees.
 

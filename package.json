@@ -1,6 +1,6 @@
 {
   "name": "@azkal182/islamic-utils",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Accurate and consistent Islamic utilities library for prayer times, qibla direction, and inheritance calculation",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -10,6 +10,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
+    },
+    "./hijri-calendar": {
+      "types": "./dist/hijri-calendar/index.d.ts",
+      "import": "./dist/hijri-calendar/index.mjs",
+      "require": "./dist/hijri-calendar/index.js"
     }
   },
   "files": [

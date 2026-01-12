@@ -8,7 +8,7 @@
 
 > **fractionalHoursToTimeOfDay**(`hours`): [`TimeOfDay`](../interfaces/TimeOfDay.md)
 
-Defined in: [src/astronomy/time.ts:104](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/astronomy/time.ts#L104)
+Defined in: [src/astronomy/time.ts:104](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/astronomy/time.ts#L104)
 
 Converts fractional hours to TimeOfDay.
 

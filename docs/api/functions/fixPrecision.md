@@ -8,7 +8,7 @@
 
 > **fixPrecision**(`value`, `decimals`): `number`
 
-Defined in: [src/core/utils/math.ts:226](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/utils/math.ts#L226)
+Defined in: [src/core/utils/math.ts:226](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/utils/math.ts#L226)
 
 Fixes floating-point precision issues by rounding to a specified number of decimal places.
 

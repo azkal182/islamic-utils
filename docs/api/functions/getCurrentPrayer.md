@@ -8,7 +8,7 @@
 
 > **getCurrentPrayer**(`location`, `timezone`, `params`, `currentTime`): [`Result`](../type-aliases/Result.md)\<[`CurrentPrayerInfo`](../interfaces/CurrentPrayerInfo.md)\>
 
-Defined in: [src/prayer-times/next-prayer.ts:247](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/next-prayer.ts#L247)
+Defined in: [src/prayer-times/next-prayer.ts:247](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/next-prayer.ts#L247)
 
 Determines the current prayer period.
 

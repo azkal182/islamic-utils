@@ -8,7 +8,7 @@
 
 > `const` **Errors**: `object`
 
-Defined in: [src/core/errors/error.ts:170](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/error.ts#L170)
+Defined in: [src/core/errors/error.ts:170](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/errors/error.ts#L170)
 
 Pre-built error factory functions for common error types.
 
@@ -33,6 +33,30 @@ Error message
 `Record`\<`string`, `unknown`\>
 
 Additional context
+
+#### Returns
+
+[`LibraryError`](../classes/LibraryError.md)
+
+### invalidAdjustment()
+
+> `readonly` **invalidAdjustment**: (`message`, `details?`) => [`LibraryError`](../classes/LibraryError.md)
+
+Creates an INVALID_ADJUSTMENT error.
+
+#### Parameters
+
+##### message
+
+`string`
+
+Error message
+
+##### details?
+
+`Record`\<`string`, `unknown`\>
+
+Adjustment details
 
 #### Returns
 
@@ -134,6 +158,30 @@ Heir details
 
 [`LibraryError`](../classes/LibraryError.md)
 
+### invalidParameterType()
+
+> `readonly` **invalidParameterType**: (`message`, `details?`) => [`LibraryError`](../classes/LibraryError.md)
+
+Creates an INVALID_PARAMETER_TYPE error.
+
+#### Parameters
+
+##### message
+
+`string`
+
+Error message
+
+##### details?
+
+`Record`\<`string`, `unknown`\>
+
+Additional details about the invalid parameter
+
+#### Returns
+
+[`LibraryError`](../classes/LibraryError.md)
+
 ### invalidTimezone()
 
 > `readonly` **invalidTimezone**: (`message`, `details?`) => [`LibraryError`](../classes/LibraryError.md)
@@ -158,6 +206,30 @@ Timezone details
 
 [`LibraryError`](../classes/LibraryError.md)
 
+### methodNotSupported()
+
+> `readonly` **methodNotSupported**: (`message`, `details?`) => [`LibraryError`](../classes/LibraryError.md)
+
+Creates a METHOD_NOT_SUPPORTED error.
+
+#### Parameters
+
+##### message
+
+`string`
+
+Error message
+
+##### details?
+
+`Record`\<`string`, `unknown`\>
+
+Method details
+
+#### Returns
+
+[`LibraryError`](../classes/LibraryError.md)
+
 ### missingParameter()
 
 > `readonly` **missingParameter**: (`paramName`) => [`LibraryError`](../classes/LibraryError.md)
@@ -171,6 +243,30 @@ Creates a MISSING_PARAMETER error.
 `string`
 
 Name of the missing parameter
+
+#### Returns
+
+[`LibraryError`](../classes/LibraryError.md)
+
+### outOfSupportedRange()
+
+> `readonly` **outOfSupportedRange**: (`message`, `details?`) => [`LibraryError`](../classes/LibraryError.md)
+
+Creates an OUT_OF_SUPPORTED_RANGE error.
+
+#### Parameters
+
+##### message
+
+`string`
+
+Error message
+
+##### details?
+
+`Record`\<`string`, `unknown`\>
+
+Details about the supported range
 
 #### Returns
 

@@ -169,9 +169,19 @@ export const ErrorCodes = {
   MISSING_PARAMETER: 'MISSING_PARAMETER',
 
   /**
+   * A value falls outside the supported range for the current context.
+   */
+  OUT_OF_SUPPORTED_RANGE: 'OUT_OF_SUPPORTED_RANGE',
+
+  /**
    * A parameter has an invalid type.
    */
   INVALID_PARAMETER_TYPE: 'INVALID_PARAMETER_TYPE',
+
+  /**
+   * The requested method is not supported by the active module.
+   */
+  METHOD_NOT_SUPPORTED: 'METHOD_NOT_SUPPORTED',
 } as const;
 
 /**

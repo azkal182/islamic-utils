@@ -8,7 +8,7 @@
 
 > `const` **DIYANET**: [`CalculationMethod`](../interfaces/CalculationMethod.md)
 
-Defined in: [src/prayer-times/methods/catalog.ts:185](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/methods/catalog.ts#L185)
+Defined in: [src/prayer-times/methods/catalog.ts:185](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/methods/catalog.ts#L185)
 
 Diyanet İşleri Başkanlığı, Turkey calculation method.
 

@@ -8,7 +8,7 @@
 
 > `const` **UTC\_OFFSET\_RANGE**: `object`
 
-Defined in: [src/core/validators/timezone.ts:21](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/validators/timezone.ts#L21)
+Defined in: [src/core/validators/timezone.ts:21](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/validators/timezone.ts#L21)
 
 Valid UTC offset range.
 

@@ -8,7 +8,7 @@
 
 > `const` **ErrorCodes**: `object`
 
-Defined in: [src/core/errors/codes.ts:31](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/errors/codes.ts#L31)
+Defined in: [src/core/errors/codes.ts:31](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/errors/codes.ts#L31)
 
 All error codes used by the library.
 
@@ -117,11 +117,23 @@ Timezone is invalid or unrecognized.
 - UTC offset must be between -12 and +14
 - IANA timezone name must be valid
 
+### METHOD\_NOT\_SUPPORTED
+
+> `readonly` **METHOD\_NOT\_SUPPORTED**: `"METHOD_NOT_SUPPORTED"` = `'METHOD_NOT_SUPPORTED'`
+
+The requested method is not supported by the active module.
+
 ### MISSING\_PARAMETER
 
 > `readonly` **MISSING\_PARAMETER**: `"MISSING_PARAMETER"` = `'MISSING_PARAMETER'`
 
 A required parameter is missing.
+
+### OUT\_OF\_SUPPORTED\_RANGE
+
+> `readonly` **OUT\_OF\_SUPPORTED\_RANGE**: `"OUT_OF_SUPPORTED_RANGE"` = `'OUT_OF_SUPPORTED_RANGE'`
+
+A value falls outside the supported range for the current context.
 
 ### POLAR\_DAY\_UNRESOLVED
 

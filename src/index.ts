@@ -343,6 +343,16 @@ export {
 } from './inheritance';
 
 // ═══════════════════════════════════════════════════════════════════════════
+// Hijri Calendar Module (Under Development)
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Placeholder re-export for the upcoming Hijri Calendar module.
+ * Actual exports will be populated in future phases.
+ */
+export * from './hijri-calendar';
+
+// ═══════════════════════════════════════════════════════════════════════════
 // Version
 // ═══════════════════════════════════════════════════════════════════════════
 

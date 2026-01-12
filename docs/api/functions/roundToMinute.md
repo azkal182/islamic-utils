@@ -8,7 +8,7 @@
 
 > **roundToMinute**(`hours`, `rule`): `number`
 
-Defined in: [src/core/utils/math.ts:62](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/utils/math.ts#L62)
+Defined in: [src/core/utils/math.ts:62](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/utils/math.ts#L62)
 
 Rounds a time value (in hours) to the nearest minute.
 

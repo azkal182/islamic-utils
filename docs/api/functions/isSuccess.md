@@ -8,7 +8,7 @@
 
 > **isSuccess**\<`T`\>(`result`): `result is SuccessResult<T>`
 
-Defined in: [src/core/types/result.ts:222](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/result.ts#L222)
+Defined in: [src/core/types/result.ts:222](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/result.ts#L222)
 
 Type guard to check if a result is successful.
 

@@ -6,7 +6,7 @@
 
 # Interface: MonthlyPrayerTimesInput
 
-Defined in: [src/prayer-times/monthly.ts:31](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L31)
+Defined in: [src/prayer-times/monthly.ts:31](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/monthly.ts#L31)
 
 Input for monthly prayer times calculation.
 
@@ -16,7 +16,7 @@ Input for monthly prayer times calculation.
 
 > `readonly` **location**: [`LocationInput`](LocationInput.md)
 
-Defined in: [src/prayer-times/monthly.ts:45](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L45)
+Defined in: [src/prayer-times/monthly.ts:45](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/monthly.ts#L45)
 
 Geographic location.
 
@@ -26,7 +26,7 @@ Geographic location.
 
 > `readonly` **month**: `number`
 
-Defined in: [src/prayer-times/monthly.ts:40](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L40)
+Defined in: [src/prayer-times/monthly.ts:40](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/monthly.ts#L40)
 
 Month (1-12).
 
@@ -36,7 +36,7 @@ Month (1-12).
 
 > `readonly` **params**: [`PrayerCalculationParams`](PrayerCalculationParams.md)
 
-Defined in: [src/prayer-times/monthly.ts:55](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L55)
+Defined in: [src/prayer-times/monthly.ts:55](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/monthly.ts#L55)
 
 Calculation parameters.
 
@@ -46,7 +46,7 @@ Calculation parameters.
 
 > `readonly` **timezone**: [`Timezone`](../type-aliases/Timezone.md)
 
-Defined in: [src/prayer-times/monthly.ts:50](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L50)
+Defined in: [src/prayer-times/monthly.ts:50](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/monthly.ts#L50)
 
 Timezone (IANA name or UTC offset in hours).
 
@@ -56,6 +56,6 @@ Timezone (IANA name or UTC offset in hours).
 
 > `readonly` **year**: `number`
 
-Defined in: [src/prayer-times/monthly.ts:35](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/monthly.ts#L35)
+Defined in: [src/prayer-times/monthly.ts:35](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/monthly.ts#L35)
 
 Year (e.g., 2024).

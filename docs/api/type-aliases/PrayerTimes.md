@@ -8,7 +8,7 @@
 
 > **PrayerTimes** = `Record`\<[`PrayerName`](PrayerName.md), `number` \| `null`\>
 
-Defined in: [src/prayer-times/types.ts:483](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/prayer-times/types.ts#L483)
+Defined in: [src/prayer-times/types.ts:483](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/prayer-times/types.ts#L483)
 
 Calculated prayer times for a single day.
 

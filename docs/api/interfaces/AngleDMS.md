@@ -6,7 +6,7 @@
 
 # Interface: AngleDMS
 
-Defined in: [src/core/types/angle.ts:42](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/angle.ts#L42)
+Defined in: [src/core/types/angle.ts:42](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/angle.ts#L42)
 
 Represents an angle in Degrees-Minutes-Seconds format.
 
@@ -43,7 +43,7 @@ const jakartaLat: AngleDMS = {
 
 > `readonly` **degrees**: `number`
 
-Defined in: [src/core/types/angle.ts:50](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/angle.ts#L50)
+Defined in: [src/core/types/angle.ts:50](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/angle.ts#L50)
 
 Whole degrees component.
 
@@ -58,7 +58,7 @@ For negative angles, only this component is negative.
 
 > `readonly` `optional` **minutes**: `number`
 
-Defined in: [src/core/types/angle.ts:61](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/angle.ts#L61)
+Defined in: [src/core/types/angle.ts:61](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/angle.ts#L61)
 
 Minutes component (0-59).
 
@@ -79,7 +79,7 @@ Always positive (0 to 59).
 
 > `readonly` `optional` **seconds**: `number`
 
-Defined in: [src/core/types/angle.ts:73](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/angle.ts#L73)
+Defined in: [src/core/types/angle.ts:73](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/angle.ts#L73)
 
 Seconds component (0-59.999...).
 

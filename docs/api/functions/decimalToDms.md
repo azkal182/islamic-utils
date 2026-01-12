@@ -8,7 +8,7 @@
 
 > **decimalToDms**(`decimal`): [`AngleDMS`](../interfaces/AngleDMS.md)
 
-Defined in: [src/core/types/angle.ts:137](https://github.com/azkal182/islamic-utils/blob/a30827e72f5e43f868fff9ce519ca224296e663c/src/core/types/angle.ts#L137)
+Defined in: [src/core/types/angle.ts:137](https://github.com/azkal182/islamic-utils/blob/f548f22580afc5800e32e3785eef49f3fce9f58a/src/core/types/angle.ts#L137)
 
 Converts an angle from decimal degrees to DMS format.
 
